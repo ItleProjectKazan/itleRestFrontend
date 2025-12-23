@@ -1,0 +1,65 @@
+.typography {
+    @at-root {
+        h1#{&}, h2#{&}, h3#{&}, h4#{&}, h5#{&}, h6#{&} {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.colorError {
+    color: var(--primary);
+}
+
+.colorPrimary {
+    color: var(--primary);
+}
+
+.colorSecondary {
+    color: var(--secondary);
+}
+
+.colorSecondaryLight {
+    color: var(--secondary-light);
+}
+
+.colorBrown {
+    color: var(--brown);
+}
+
+.colorWhite {
+    color: var(--white);
+}
+
+.colorBlack {
+    color: var(--brown-dark);
+}
+
+.alignStart {
+    text-align: left;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.alignEnd {
+    text-align: right;
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.weightBold {
+    font-weight: 700;
+}
+
+.weightSemiBold {
+    font-weight: 500;
+}
+
+.weightNormal {
+    font-weight: normal;
+}

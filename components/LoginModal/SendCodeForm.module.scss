@@ -1,0 +1,78 @@
+@import "styles/mixins";
+
+/* Chrome, Safari, Edge, Opera */
+
+.codeInput::-webkit-outer-spin-button,
+.codeInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+
+.codeInput[type=number] {
+    -moz-appearance: textfield;
+}
+
+.codeInputs {
+    display: inline-flex !important;
+    height: 60px;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 25px;
+
+    @include size-phone-medium {
+        margin-top: 20px;
+    }
+}
+
+.codeInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    max-width: 60px;
+    //background-color: #151515;dark theme
+    background-color: #FFF;
+    //border: 1px solid #292929;dark theme
+    border: 1px solid #E8DDDB;
+    border-radius: 14px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+    //color: var(--white);dark theme
+    color: #232323;
+    transition: .3s linear all;
+
+    & + & {
+        margin-left: 10px;
+    }
+    &:hover,
+    &:focus {
+        border-color: #B6ABA9;
+    }
+    @include size-phone-medium {
+        font-size: 32px;
+    }
+}
+
+.codeInputSelected {
+    outline: none;
+    border: 1px solid #FFF;
+}
+
+.submitBtn {
+    width: 100%;
+    margin-top: 30px;
+    transition: .3s linear all;
+
+    @include size-phone-medium {
+        margin-top: 20px;
+    }
+}
+
+.incorrectCodeInput {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}

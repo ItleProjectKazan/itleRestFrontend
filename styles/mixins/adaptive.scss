@@ -1,0 +1,105 @@
+$breakpoint-phone-small: 380px;
+$breakpoint-phone-medium: 576px;
+$breakpoint-phone-large: 768px;
+$breakpoint-tablet: 992px;
+$breakpoint-laptop: 1200px;
+$breakpoint-big-laptop: 1360px;
+$breakpoint-desktop: 1440px;
+$breakpoint-big-desktop: 1540px;
+$breakpoint-desktop2k: 2300px;
+
+@mixin size($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin size-phone-small {
+    @media (max-width: $breakpoint-phone-small) {
+        @content;
+    }
+}
+
+@mixin size-more-than-phone-small {
+    @media (min-width: $breakpoint-phone-small + 1) {
+        @content;
+    }
+}
+
+@mixin size-phone-medium {
+    @media (max-width: $breakpoint-phone-medium) {
+        @content;
+    }
+}
+
+@mixin size-more-than-phone-medium {
+    @media (min-width: $breakpoint-phone-medium + 1) {
+        @content;
+    }
+}
+
+@mixin size-phone-large {
+    @media (max-width: $breakpoint-phone-large) {
+        @content;
+    }
+}
+
+@mixin size-more-than-phone-large {
+    @media (min-width: $breakpoint-phone-large + 1) {
+        @content;
+    }
+}
+
+@mixin size-tablet {
+    @media (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin size-more-than-tablet {
+    @media (min-width: $breakpoint-tablet + 1) {
+        @content;
+    }
+}
+
+@mixin size-laptop {
+    @media (max-width: $breakpoint-laptop) {
+        @content;
+    }
+}
+
+@mixin size-more-than-laptop {
+    @media (min-width: $breakpoint-laptop + 1) {
+        @content;
+    }
+}
+
+@mixin size-big-laptop {
+    @media (max-width: $breakpoint-big-laptop) {
+        @content;
+    }
+}
+
+@mixin size-desktop {
+    @media (max-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin size-more-than-desktop {
+    @media (min-width: $breakpoint-desktop + 1) {
+        @content;
+    }
+}
+
+@mixin size-desktop2k {
+    @media (max-width: $breakpoint-desktop2k) {
+        @content;
+    }
+}
+
+@mixin size-more-than-desktop2k {
+    @media (min-width: $breakpoint-desktop2k + 1) {
+        @content;
+    }
+}

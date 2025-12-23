@@ -1,0 +1,168 @@
+.contacts-page {
+    width: 100%;
+    padding: 0 !important;
+    margin-bottom: 75px !important;
+    margin-top: 0 !important;
+    display: flex;
+    flex-direction: column;
+
+    .main-title {
+        display: none;
+    }
+    .breadcrumbs {
+        max-width: var(--container-width);
+        width: 100%;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    &__title.section-title {
+        margin-bottom: 50px;
+        color: #232323;/*dark theme #FFF*/
+    }
+    .contacts-list {
+        width: calc(100% + 15px);
+        margin: 0 -7.5px;
+
+        &__item {
+            width: 25%;
+            padding: 0 7.5px;
+            margin-bottom: 15px;
+
+            &-inner {
+                width: 100%;
+                border-radius: 40px;
+                //border: 1px solid #292929;dark theme
+                //background-color: #0F0F0F;dark theme
+                background-color: #D8CECB;
+                padding: 25px 30px;
+                font-family: var(--font-gotham);
+            }
+            &-title {
+                margin: 0 0 60px 0;
+                //color: #FFF;dark theme
+                color: #232323;
+                font-family: var(--font-druk-wide-cy);
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 130%;
+                letter-spacing: .64px;
+                text-transform: uppercase;
+                word-spacing: 9999px;
+            }
+            &-info {
+                width: 100%;
+                padding-bottom: 20px;
+                min-height: 65px;
+                //border-bottom: 1px solid #222222;dark theme
+                border-bottom: 1px solid #B5A7A4;
+                color: #606060;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 120%;
+                margin-bottom: 10px;
+                margin-top: auto;
+            }
+            &-name {
+                display: block;
+                width: 100%;
+                margin-top: 2px;
+                //color: #FFF;dark theme
+                color: #232323;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 120%;
+            }
+            &-contact {
+                margin-top: 15px;
+                //color: #FFF;dark theme
+                color: #232323;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 120%;
+                cursor: pointer;
+
+                span {
+                    font-size: 18px;
+                    //color: #FFF;dark theme
+                    color: #232323;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:  $breakpoint-big-desktop) {
+    .contacts-page {
+        margin-bottom: 50px !important;
+
+        &__title.section-title {
+            margin-bottom: 40px;
+        }
+    }
+}
+@media (max-width:  $breakpoint-laptop) {
+    .contacts-page {
+
+        &__title.section-title {
+            margin-bottom: 30px;
+        }
+        .contacts-list {
+            width: calc(100% + 10px);
+            margin: 0 -5px;
+
+            &__item {
+                padding: 0 5px;
+                margin-bottom: 10px;
+
+                &-inner {
+                    border-radius: 30px;
+                    padding: 20px 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:  $breakpoint-tablet) {
+    .contacts-page {
+
+        &__title.section-title {
+            margin-bottom: 25px;
+        }
+        .contacts-list {
+
+            &__item {
+                width: 50%;
+
+                &-title {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:  $breakpoint-phone-medium) {
+    .contacts-page {
+
+        &__title.section-title {
+            margin-bottom: 20px;
+        }
+        .contacts-list {
+
+            &__item {
+                width: 100%;
+
+                &-inner {
+                    border-radius: 25px;
+                }
+                &-title {
+                    margin-bottom: 25px;
+                }
+                &-info {
+                    min-height: auto;
+                    padding-bottom: 15px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

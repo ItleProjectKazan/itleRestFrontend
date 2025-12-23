@@ -1,0 +1,142 @@
+@import 'styles/mixins';
+
+.top {
+    font-size: 16px;
+    border-bottom: 1px solid var(--brown-100);
+
+    @include size-tablet {
+        font-size: 15px;
+    }
+
+    @include size-phone-medium {
+        font-size: 13px;
+    }
+
+    @include size-phone-small {
+        font-size: 12px;
+    }
+}
+
+.topContent {
+    padding: 3.75em 0;
+}
+
+.heroImg {
+    @include size-phone-small {
+        width: 115px;
+        height: 88px;
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include size-tablet {
+        flex-direction: column-reverse;
+    }
+}
+
+.heroText {
+    margin-bottom: 2.875em;
+    display: flex;
+    flex-direction: column;
+
+    @include size-tablet {
+        margin-top: 20px;
+    }
+}
+
+.heroMainText {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    column-gap: 1.25em;
+    row-gap: 1.875em;
+}
+
+.heroTitle {
+    font-size: 2.25em;
+}
+
+.heroSubtitle {
+    font-size: 1.375em;
+    margin-top: 30px;
+}
+
+.address {
+    padding: 0;
+    margin-top: 38px;
+
+    > div {
+        display: flex;
+        margin-bottom: 1.125em;
+    }
+}
+
+.addressTerm {
+    font-size: 1.375em;
+}
+
+.addressDef {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 1.375em;
+    font-weight: normal;
+}
+
+.noteDef {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 1.375em;
+    font-weight: normal;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+.cancelIcon {
+    margin-right: 8px;
+}
+
+.cancelButton {
+    color: var(--primary);
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.phoneSection {
+    // display: flex;
+    // align-items: center;
+    margin: 10px 0 40px;
+    @include size-phone-medium {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.phoneSectionText {
+    margin-right: 16px;
+    font-size: 22px;
+    color: var(--brown-dark);
+
+    @include size-tablet {
+        font-size: 16px;
+    }
+}
+
+.phoneSectionIcon {
+    // color: var(--green);
+    color: #333;
+    margin-right: 8px;
+    //
+}
+
+.phoneSectionPhone {
+    font-size: 24px;
+    color: #333;
+    @include size-tablet {
+        font-size: 20px;
+    }
+}

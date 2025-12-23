@@ -1,0 +1,68 @@
+@import "styles/mixins";
+
+.stepper {
+    position: relative;
+    margin-left: auto;
+    @include size-tablet {
+        display: none !important;
+    }
+}
+
+@mixin line {
+    position: absolute;
+    top: calc(100% + 12px);
+    height: 6px;
+    border-radius: 20px;
+}
+
+.stepperLine {
+    width: 100%;
+    background-color: #f3f0eb;
+
+    @include line();
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: var(--brown-100);
+
+    & + & {
+        margin-left: 100px;
+    }
+
+    &.active::after {
+        content: "";
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background-color: var(--primary);
+        border-radius: 20px;
+
+        @include line();
+    }
+
+    img {
+        pointer-events: none;
+        opacity: .5;
+    }
+}
+
+.active {
+    color: var(--primary);
+
+    img {
+        pointer-events: auto;
+        opacity: 1;
+    }
+}
+
+.visited {
+    color: var(--primary);
+
+    img {
+        pointer-events: auto;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,113 @@
+@import "styles/mixins";
+
+.menu {
+    display: none;
+
+    @include size-tablet {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: var(--z-index-mobile-menu);
+        display: block;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-column: 1 / 3;
+        background: var(--primary);
+        padding: 20px 13px 27px 32px;
+    }
+}
+
+.profileLoggedIn {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.profileLabel {
+    margin-left: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.bonusesCount {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.logoutIcon {
+    margin-left: 16px;
+    color: #f1c2bc;
+    cursor: pointer;
+}
+
+.nav {
+    margin-top: 28px;
+}
+
+.navList {
+    padding-left: 0;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    margin: 0;
+    border-top: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--line-color);
+}
+
+.navItem {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 44px;
+    color: var(--white);
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 8px;
+    color: var(--white);
+    margin-top: 28px;
+}
+
+.apps {
+    display: none;
+    margin-top: 30px;
+}
+
+.closeBtn {
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: 14px;
+    cursor: pointer;
+}
+
+.logoutText {
+    margin-left: 12px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+
+    span {
+        font-size: 16px;
+        color: var(--pink);
+    }
+}

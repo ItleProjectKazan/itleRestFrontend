@@ -1,0 +1,5 @@
+export const SIMPLE_MODIFIER_GROUP_KEY = '-'
+export const ALERT_MESSAGE_COOKIE = 'alert_message'
+export const ORDER_TYPE_COOKIE = 'order_type'
+export const RESTAURANT_COOKIE = 'restaurant'
+export const DELIVERY_ZONE_ID = 'delivery_zone_id'

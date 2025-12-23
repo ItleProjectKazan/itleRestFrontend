@@ -1,0 +1,42 @@
+@import 'styles/mixins';
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    color: white;
+}
+
+.categoryName {
+    text-transform: capitalize;
+    white-space: nowrap;
+
+    font-family: var(--font-gotham);
+    font-size: 18px;
+    line-height: 22px;
+
+    color: white;
+
+    &:hover {
+        color: var(-grey-dark);
+    }
+}
+
+.kitchenButton {
+    font-family: var(--font-gotham);
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+    white-space: nowrap;
+    margin-left: 40px;
+
+    cursor: pointer;
+
+    &:hover {
+        color: var(-grey-dark);
+    }
+}

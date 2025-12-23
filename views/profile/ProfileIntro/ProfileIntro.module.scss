@@ -1,0 +1,146 @@
+@import "styles/mixins";
+
+/*.mainBlock {
+    padding: 24px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .07);
+    border-radius: 7px;
+    display: flex;
+
+    .leftPart {
+        padding-right: 65px;
+
+        @include size-laptop {
+            padding-right: 20px;
+        }
+
+        @include size-phone-large {
+            padding-right: 0;
+            width: 100%;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    .rightPart {
+        padding-left: 65px;
+        border-left: solid 1px var(--pink);
+
+        @include size-laptop {
+            padding-left: 20px;
+        }
+
+        @include size-phone-large {
+            border: none;
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+
+    @include size-phone-large {
+        flex-wrap: wrap;
+    }
+}
+
+.blockHeader {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--brown-dark);
+    margin-bottom: 5px;
+
+    @include size-phone-large {
+        width: 100%;
+        font-size: 18px;
+        line-height: 23px;
+        margin-bottom: 0;
+    }
+}
+
+.bonusesData {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 52px;
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+    margin-bottom: 10px;
+
+    svg {
+        height: 34px;
+        width: 34px;
+        flex-shrink: 0;
+        fill: var(--primary);
+        margin-left: 8px;
+    }
+
+    @include size-phone-large {
+        margin-bottom: 0;
+    }
+
+    @include size-phone-small {
+        width: 100%;
+    }
+}
+
+.expirationData {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #393939;
+
+    @include size-phone-large {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            display: block;
+        }
+    }
+
+    @include size-phone-small {
+        flex-direction: row;
+
+        span {
+            margin-right: 5px;
+        }
+    }
+}
+
+.buttonHolder {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+
+    @include size-phone-large {
+        margin-top: 14px;
+        justify-content: space-between;
+    }
+
+    @include size-phone-small {
+        flex-wrap: wrap;
+    }
+}
+
+.toMenuButton {
+    flex-shrink: 0;
+    margin-right: 64px;
+
+    @include size-laptop {
+        margin-right: 15px;
+    }
+}
+
+.toInfoLink {
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--green-dark);
+    font-weight: 500;
+
+    @include size-phone-small {
+        margin-top: 20px;
+    }
+}*/

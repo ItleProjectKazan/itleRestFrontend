@@ -1,0 +1,41 @@
+@import "styles/mixins";
+
+.products {
+    display: grid;
+    column-gap: 15px;
+    row-gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+
+    @include size-phone-large {
+        grid-template-columns: 1fr;
+        grid-row-gap: 16px;
+        padding-bottom: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.notAvailableMessageHolder {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    @include size-phone-large {
+        padding-left: 10px;
+        padding-right: 10px;
+        display: inline-flex;
+        margin-bottom: 20px;
+    }
+}
+
+.notAvailableMessageText {
+    color: #232323;
+    font-size: 18px;
+    margin-left: 8px;
+    font-weight: 500;
+
+    @include size-phone-large {
+        font-size: 13px;
+    }
+}

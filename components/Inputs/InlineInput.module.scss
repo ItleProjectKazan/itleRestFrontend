@@ -1,0 +1,130 @@
+$innerPadding: 20px;
+$halfPadding: 10px;
+
+.inlineInput {
+    width: 100%;
+    position: relative;
+}
+
+.inputDataHolder {
+    min-height: 60px;
+    width: 100%;
+    border-radius: 14px;
+    //background-color: #181818;dark theme
+    background-color: #FFF;
+    //border: 1px solid #181818;dark theme
+    border: 1px solid #E8DDDB;
+    //color: var(--white);dark theme
+    color: #232323;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    padding: 28px 45px 5px 15px;
+    z-index: 10;
+    overflow: hidden;
+    position: relative;
+    transition: .3s linear all;
+
+    &.editing {
+        border: 1px solid #292929;
+        //background-color: #0F0F0F;dark theme
+        background-color: #FFF;
+
+        &.error {
+            border-color: var(--primary);
+            background: #0F0F0F;
+
+            .input {
+                color: var(--primary);
+            }
+        }
+    }
+    &:hover,
+    &:focus {
+        border-color: #B6ABA9;
+    }
+    div {
+        font-weight: 400 !important;
+    }
+}
+.inputError {
+    font-size: 12px;
+    color: var(--primary);
+    font-weight: 400 !important;
+    margin-top: 2px;
+}
+.inputLabel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 12px;
+    padding: 0 15px;
+    color: #606060;
+    font-size: 12px;
+    font-weight: 400 !important;
+    line-height: 120%;
+    z-index: 20;
+}
+
+.input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 120%;
+    outline: none;
+    z-index: 1;
+    //background-color: #181818;dark theme
+    background-color: #FFF;
+    //border: 1px solid #181818;dark theme
+    border: 1px solid #E8DDDB;
+    //color: var(--white);dark theme
+    color: #232323;
+    font-weight: 400;
+    padding: 28px 45px 0 15px;
+    transition: .3s linear all;
+
+    &::placeholder {
+        //color: var(--white);dark theme
+        color: #232323;
+    }
+    &:hover,
+    &:focus {
+        border-color: #B6ABA9;
+    }
+}
+
+.editButton {
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 20;
+
+    svg {
+        flex: 0;
+        height: 24px;
+        width: 24px;
+    }
+
+    &.saving {
+        animation-name: spin;
+        animation-duration: 2000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

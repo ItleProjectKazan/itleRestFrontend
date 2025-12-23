@@ -1,0 +1,45 @@
+.tooltip {
+    --arrow-size: 8px;
+    --arrow-position: calc((var(--arrow-size) - 1px) * -1);
+    background: #d8cecb;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, .7);
+    border-radius: 6px;
+    padding: 15px;
+    z-index: var(--z-index-tooltip);
+    color: #606060;
+
+    &[data-popper-placement^="top"] > .arrow {
+        bottom: var(--arrow-position);
+    }
+    &[data-popper-placement^="bottom"] > .arrow {
+        top: var(--arrow-position);
+    }
+    &[data-popper-placement^="left"] > .arrow {
+        right: var(--arrow-position);
+    }
+    &[data-popper-placement^="right"] > .arrow {
+        left: var(--arrow-position);
+    }
+    &[data-popper-placement^="top-end"] > .arrow {
+        bottom: 8px;
+    }
+}
+.arrow,
+.arrow::before {
+    position: absolute;
+    width: 16px;
+}
+.arrow {
+    visibility: hidden;
+}
+.arrow::before {
+    visibility: visible;
+    content: "";
+    transform: rotate(45deg);
+    background-color: #d8cecb;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 2px;
+    z-index: 0;
+}

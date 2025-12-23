@@ -1,0 +1,47 @@
+.preloader {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    top: 25%;
+    margin: 0 auto 0 auto;
+    min-width: 4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    div {
+        background-color: var(--primary);
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        animation: preloaderAnimation .9s ease alternate infinite;
+        animation-delay: .36s;
+
+        &:first-child {
+            animation-delay: .18s;
+        }
+
+        &:last-child {
+            animation-delay: .54s;
+        }
+    }
+
+    &.contrast {
+
+        div {
+            background-color: #fff;
+        }
+    }
+}
+
+
+@keyframes preloaderAnimation {
+
+    0% {
+        transform: scale(.01);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

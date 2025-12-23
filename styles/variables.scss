@@ -1,0 +1,75 @@
+:root {
+    --primary: #C91100;
+    --primary-light: #DD2514;
+    --primary-border: #C91100;
+    --primary-border-light: #E72F1E;
+    --body-background: #CBC2C0;/*dark theme #0F0F0F*/
+    --dark: #0F0F0F;
+    --dark-light: #191919;
+    --primary-text: #606060;
+
+    --secondary: #3e4b31;
+    --secondary-light: #6a893e;
+    --brown-100: #ebe1d5;
+    --brown: #988171;
+    --brown-0: #e6dcd0;
+    --brown-dark: #362e28;
+    --burger-color: #566546;
+    --inactive-brown: #c5b199;
+    --green: #4b5a3d;
+    --green-dark: #566546;
+    --green-light: #6a893e;
+    --grey:  #f3f0eb;
+    --light-brown: #e9ded0;
+    --line-color: #b55547;
+    --light-green: #6a893e;
+    --orange: #d84d21;
+    --pink: #ebe1d5;
+    --pink-light: #faf7f2;
+    --red-100: #ffe4de;
+    --red-150: #f6bdb5;
+    --red-200: #ec5956;
+    --red-250: #f52c3a;
+    --discount: #e10000;
+    --white: #fff;
+    --grey-dark: #7c7c7c;
+    --grey-text-link: #c8c8c8;
+    --grey-medium: #a0a0a0;
+    --grey-light: #f0ece4;
+    --grey-semilight: #c0c0c0;
+    --green-bright: #3aaa35;
+    --green-text: #296f3a;
+    --grey-semilighter: #cdc5c3;
+    --border-color: #eaeaea;
+
+
+
+
+    // --font-appetite: "Appetite";
+    // --font-cofosans: "CoFo Sans";
+    // --font-montserrat: "Montserrat";
+    // --font-druk: "Druk";
+
+    --font-appetite: "Gotham";
+    --font-cofosans: "Gotham";
+    --font-montserrat: "Gotham";
+    --font-druk: "Gotham";
+
+    --font-gotham: "Gotham";
+    --font-druk-wide-cy: "Druk Wide Cy";
+
+
+    --container-width: 1300px;
+
+    --z-index-cart-icon: 100;
+    --z-index-floating-footer: 150;
+    --z-index-mobile-menu: 500;
+    --z-index-modal-overlay: 2000;
+    --z-index-tooltip: 200;
+
+    --modal-max-height: 80vh;
+
+    --font-small: 14px;
+    --font-medium: 18px;
+    --font-large: 22px;
+}

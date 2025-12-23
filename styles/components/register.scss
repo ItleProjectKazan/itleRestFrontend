@@ -1,0 +1,67 @@
+.calendar-field {
+    //background: #151515;dark theme
+    background: #FFF;
+    //border: 1px solid #292929;dark theme
+    border: 1px solid #E8DDDB;
+    border-radius: 14px;
+    display: -moz-box;
+    display: flex;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    margin: 5px 5px 20px 5px;
+    padding: 11px 15px 11px 15px;
+    -moz-box-align: flex-start;
+    align-items: flex-start;
+    transition: .3s linear all;
+
+    &:hover,
+    &:focus {
+        border-color: #B6ABA9;
+    }
+    &.error {
+        border-color: #d31b0a;
+
+        &::placeholder {
+            color: #d31b0a;
+        }
+    }
+    &__label {
+        font-family: var(--font-gotham);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 120%;
+        //color: #606060;dark theme
+        color: #232323;
+    }
+    .react-datepicker-wrapper {
+        width: 100%;
+
+        input {
+            width: 100%;
+            height: 22px;
+            margin-top: 6px;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-family: var(--font-gotham);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            //color: #FFF;dark theme
+            color: #232323;
+            padding: 0;
+            border-radius: 0;
+
+            &::placeholder {
+                display: none;
+                color: transparent;
+            }
+        }
+    }
+    .react-datepicker__header {
+        color: white;
+    }
+}

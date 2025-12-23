@@ -1,0 +1,190 @@
+.halal-info {
+    width: 100%;
+    overflow: hidden;
+
+    &__inner {
+        width: 100%;
+    }
+    &__info {
+        width: 50%;
+        padding-right: 15px;
+
+        &-title.section-title {
+            display: block;
+            width: 100%;
+            margin-bottom: 50px;
+
+            span {
+                display: block;
+                width: 100%;
+            }
+        }
+        &-description {
+            width: 100%;
+
+            p {
+                margin-top: 0;
+                color: var(--primary-text);
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 120%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__image {
+        width: 50%;
+        position: relative;
+
+        &-img {
+            margin-top: 30px;
+            max-width: calc(100% - 80px);
+            z-index: 10;
+        }
+        &-bg {
+            position: absolute;
+            right: -15%;
+            z-index: 9;
+            width: 55%;
+        }
+    }
+}
+@media (max-width: $breakpoint-big-desktop) {
+    .halal-info {
+
+        &__info {
+
+            &-description {
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+        &__image {
+
+            &-img {
+                max-width: calc(100% - 60px);
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-desktop) {
+    .halal-info {
+
+        &__info {
+
+            &-title.section-title {
+                margin-bottom: 20px;
+            }
+            &-description {
+                margin-bottom: 20px;
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+        &__image {
+
+            &-img {
+                max-width: calc(100% - 50px);
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-big-laptop) {
+    .halal-info {
+
+        &__image {
+
+            &-bg {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-laptop) {
+    .halal-info {
+
+        &__info {
+
+            &-title.section-title {
+                font-size: 30px;
+            }
+            &-description {
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+        &__image {
+
+            &-img {
+                max-width: calc(100% - 40px);
+            }
+        }
+    }
+}
+@media (min-width: $breakpoint-phone-large) and (max-width: $breakpoint-tablet) {
+    .halal-info {
+
+        &__info {
+
+            &-title.section-title {
+                font-size: 24px;
+            }
+            &-description {
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+        &__image {
+
+            &-img {
+                max-width: calc(100% - 30px);
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-phone-large) {
+    .halal-info {
+
+        &__info {
+            width: 100%;
+
+            &-title.section-title {
+                font-size: 28px;
+            }
+            &-image {
+                display: block;
+            }
+            &-description {
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+        &__image {
+            display: none;
+        }
+    }
+}
+@media (max-width: 450px) {
+    .halal-info {
+
+        &__info {
+
+            &-title.section-title {
+                font-size: 24px;
+            }
+        }
+    }
+}

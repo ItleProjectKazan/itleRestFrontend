@@ -1,0 +1,40 @@
+@import "styles/mixins";
+
+.editForm {
+    padding: 24px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .07);
+    border-radius: 7px;
+}
+
+.inputHolder {
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: solid 1px var(--pink);
+
+    &:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+.changeControl {
+    cursor: pointer;
+    color: var(--primary);
+
+    &:hover {
+        color: var(--primary-light);
+    }
+}
+
+.error {
+    padding: 15px;
+    margin-top: 15px;
+    background: var(--red-100);
+    border: 2px solid var(--red-150);
+    border-radius: 6px;
+    color: var(--red-200);
+    line-height: 24px;
+    white-space: pre-wrap;
+}

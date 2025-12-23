@@ -1,0 +1,180 @@
+.checkout-page {
+    width: 100%;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+
+    &__inner {
+        width: 100%;
+    }
+    &__content {
+        width: calc(100% - 250px);
+        padding-right: 75px;
+
+        &-title {
+            padding: 0 5px;
+            //color: #FFF;dark theme
+            color: #232323;
+            font-family: var(--font-druk-wide-cy);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 130%;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+
+            &--red {
+                color: var(--primary);
+            }
+            span {
+                color: var(--primary);
+            }
+        }
+        &-error {
+            color: #FFF;
+            font-family: var(--font-gotham);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 120%;
+            margin: 5px 0;
+        }
+        &-row {
+            width: 100%;
+            margin: 5px 0 20px 0;
+        }
+    }
+    &__title {
+        margin-bottom: 40px;
+    }
+    &__delivery {
+        margin-bottom: 15px;
+    }
+    &__fields {
+        width: calc(100% + 10px);
+        margin: 0 -5px;
+
+        &-error {
+            width: 100%;
+            margin-top: -15px;
+            margin-bottom: 5px;
+            padding: 0 20px;
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 120%;
+        }
+    }
+    &__aside {
+        width: 250px;
+    }
+    &__profile {
+        width: 100%;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        //border: 1px solid #292929;dark theme
+        border: 1px solid #B5A7A4;
+        //background-color: #0F0F0F;dark theme
+        padding: 8px 15px 8px 8px;
+
+        &:hover {
+            border-color: var(--primary);
+        }
+        &-icon {
+            width: 36px;
+            min-width: 36px;
+            height: 36px;
+            border-radius: 12px;
+            background-color: #181818;
+
+            span {
+                font-size: 20px;
+                color: #FFF;
+            }
+        }
+        &-info {
+            margin: 0 10px;
+            font-family: var(--font-gotham);
+        }
+        &-name {
+            //color: #FFF;dark theme
+            color: #232323;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 120%;
+            margin: 0;
+        }
+        &-text {
+            color: #606060;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 120%;
+        }
+        &-logout {
+            margin-left: auto;
+            font-size: 20px;
+            color: #606060;
+        }
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .checkout-page {
+        margin-bottom: 50px;
+
+        &__content {
+            padding-right: 30px;
+
+            &-title {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            &-row {
+                margin: 5px 0 15px 0;
+            }
+        }
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__profile {
+            margin-bottom: 25px;
+        }
+    }
+}
+@media (max-width: $breakpoint-phone-large) {
+    .checkout-page {
+        margin-bottom: 40px;
+
+        &__content {
+            padding-right: 20px;
+        }
+        &__title {
+            margin-bottom: 25px;
+        }
+        &__profile {
+            margin-bottom: 20px;
+            display: none;
+        }
+    }
+}
+@media (max-width: $breakpoint-phone-medium) {
+    .checkout-page {
+        margin-bottom: 30px;
+
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__content {
+            padding-right: 0;
+            width: 100%;
+
+            &-row {
+                width: 100%;
+                margin: 5px 0 10px 0;
+            }
+        }
+        &__aside {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+}

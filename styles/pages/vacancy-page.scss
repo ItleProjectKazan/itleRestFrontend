@@ -1,0 +1,423 @@
+.vacancy-page {
+    width: 100%;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin-bottom: 75px !important;
+    display: flex;
+    flex-direction: column;
+
+    &__title.section-title {
+        margin-bottom: 50px;
+    }
+    .main-title {
+        display: none;
+    }
+    .breadcrumbs {
+        max-width: var(--container-width);
+        width: 100%;
+        margin: 0 auto 20px auto;
+        padding: 0 15px;
+    }
+    .vacancy-list {
+        width: 100%;
+    }
+    .vacancy {
+        width: 100%;
+        border-radius: 40px;
+        background-color: #d8cecb;
+        padding: 10px;
+        margin-bottom: 40px;
+        font-family: var(--font-gotham);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__info {
+            width: calc(100% - 350px);
+            padding: 30px;
+            height: 100%;
+
+            &-address {
+                min-height: 30px;
+                padding: 5px 15px;
+                border-radius: 12px;
+                border: 1px solid var(--primary);
+                color: #232323;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 120%;
+                margin-bottom: 15px;
+            }
+            &-title {
+                display: block;
+                width: 100%;
+                color: #232323;
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 130%;
+                margin: 0 0 12px 0;
+            }
+            &-description {
+                width: 100%;
+                color: #606060;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 120%;
+                margin-bottom: 30px;
+            }
+        }
+        &__details {
+            width: 100%;
+            border-top: 1px solid #b5a7a4;
+            margin-top: auto;
+
+            &-column {
+                margin-right: 10px;
+                margin-top: 15px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            &-text {
+                color: #606060;
+                font-size: 10px;
+                font-weight: 500;
+                line-height: 120%;
+                white-space: nowrap;
+            }
+            &-salary {
+                margin-top: 1px;
+                color: #232323;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 120%;
+                white-space: nowrap;
+            }
+            &-value {
+                color: #232323;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 120%;
+                white-space: nowrap;
+                margin-top: 4px;
+            }
+        }
+        &__form {
+            width: 350px;
+            border-radius: 30px;
+            background-color: #fff;
+            padding: 25px 30px 30px 30px;
+
+            &-title {
+                display: block;
+                margin: 0 0 20px 0;
+                color: #232323;
+                font-family: var(--font-druk-wide-cy);
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 130%;
+                text-transform: uppercase;
+            }
+            &-bottom {
+                width: 100%;
+            }
+            &-btn {
+                height: 56px;
+                padding: 0 20px;
+                border-radius: 20px;
+                background-color: var(--primary);
+                color: #fff;
+                font-size: 16px;
+                font-weight: 500;
+                border: none;
+                cursor: pointer;
+                margin-right: 15px;
+
+                &:hover {
+                    background-color: var(--primary-light);
+                }
+                &:disabled {
+                    background-color: var(--red-150); //#f9afa9;
+                }
+            }
+            &-policy {
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+
+                input {
+                    visibility: hidden;
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+
+                    &:checked {
+                        & + .policy-block {
+                            .policy-block {
+                                &__check {
+                                    border: 1px solid #232323;
+                                    background-color: #232323;
+                                }
+                            }
+                        }
+                    }
+                }
+                .policy-block {
+                    &__check {
+                        width: 20px;
+                        min-width: 20px;
+                        height: 20px;
+                        border: 1px solid #606060;
+                        margin-right: 6px;
+
+                        span {
+                            font-size: 10px;
+                            color: #fff;
+                        }
+                    }
+                    &__text {
+                        color: #b5a7a4;
+                        font-size: 10px;
+                        font-weight: 400;
+                        line-height: 120%;
+
+                        a {
+                            color: #b5a7a4;
+                            text-decoration: underline;
+
+                            &:hover {
+                                text-decoration: none;
+                                color: #232323;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__fields {
+            width: calc(100% + 15px);
+            margin: 0 -7.5px;
+        }
+        &__field {
+            width: 100%;
+            padding: 0 7.5px;
+            margin-bottom: 15px;
+
+            &.error {
+                .vacancy__field-input {
+                    border-color: var(--primary);
+                }
+            }
+            &-inner {
+                width: 100%;
+                position: relative;
+            }
+            &-label {
+                position: absolute;
+                left: 15px;
+                top: 12px;
+                color: #b5a7a4;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 120%;
+            }
+            &-input {
+                width: 100%;
+                height: 66px;
+                padding: 20px 15px 0 15px;
+                border-radius: 14px;
+                border: 1px solid #e8dddb;
+                background-color: #fff;
+                color: #232323;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 120%;
+
+                &:hover,
+                &:focus {
+                    border-color: #b6aba9;
+                }
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-big-desktop) {
+    .vacancy-page {
+        margin-bottom: 50px !important;
+    }
+}
+@media (max-width: $breakpoint-big-laptop) {
+    .vacancy-page {
+        &__title.section-title {
+            margin-bottom: 40px;
+        }
+        .vacancy {
+            border-radius: 35px;
+            margin-bottom: 35px;
+
+            &__info {
+                padding: 25px;
+
+                &-description {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-laptop) {
+    .vacancy-page {
+        &__title.section-title {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        .vacancy {
+            border-radius: 30px;
+            margin-bottom: 30px;
+
+            &__info {
+                width: calc(100% - 315px);
+                padding: 15px 20px 15px 10px;
+
+                &-description {
+                    margin-bottom: 20px;
+                    font-size: 15px;
+                }
+            }
+            &__details {
+                &-column {
+                    margin-right: 5px;
+                    margin-top: 10px;
+                }
+            }
+            &__form {
+                width: 315px;
+                border-radius: 30px;
+                padding: 20px 20px 20px;
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .vacancy-page {
+        &__title.section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .vacancy {
+            border-radius: 25px;
+            margin-bottom: 25px;
+
+            &__info {
+                width: 100%;
+                padding: 10px;
+                height: auto;
+
+                &-title {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+                &-description {
+                    margin-bottom: 15px;
+                    font-size: 14px;
+                }
+            }
+            &__details {
+                &-column {
+                    margin-right: 5px;
+                    margin-top: 10px;
+                }
+                &-salary {
+                    font-size: 18px;
+                }
+            }
+            &__form {
+                width: 100%;
+                border-radius: 25px;
+                padding: 20px;
+
+                &-title {
+                    margin-bottom: 10px;
+                    font-size: 16px;
+                }
+            }
+            &__field {
+                width: 50%;
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-phone-large) {
+    .vacancy-page {
+        .vacancy {
+            border-radius: 20px;
+            margin-bottom: 20px;
+            padding: 5px;
+
+            &__info {
+                padding: 10px;
+
+                &-title {
+                    font-size: 16px;
+                }
+                &-description {
+                    margin-bottom: 10px;
+                }
+            }
+            &__details {
+                &-salary {
+                    font-size: 16px;
+                }
+                &-value {
+                    font-size: 12px;
+                }
+            }
+            &__form {
+                border-radius: 20px;
+                padding: 15px;
+
+                &-btn {
+                    height: 40px;
+                    padding: 0 15px;
+                    border-radius: 14px;
+                    font-size: 14px;
+                    margin-right: 15px;
+                }
+            }
+            &__field {
+                &-label {
+                    top: 7px;
+                }
+                &-input {
+                    height: 50px;
+                    padding: 16px 15px 0;
+                    border-radius: 12px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-phone-medium) {
+    .vacancy-page {
+    }
+}
+@media (max-width: 450px) {
+    .vacancy-page {
+        &__title {
+            font-size: 24px;
+        }
+        .vacancy {
+            border-radius: 15px;
+            margin-bottom: 15px;
+
+            &__form {
+                border-radius: 15px;
+            }
+            &__field {
+                width: 100%;
+            }
+        }
+    }
+}

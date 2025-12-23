@@ -1,0 +1,56 @@
+@import "styles/mixins";
+
+.body {
+    padding-bottom: 60px;
+    background-color: var(--pink-light);
+
+    @include size-phone-large {
+        padding-top: 20px;
+        padding-bottom: 26px;
+    }
+}
+
+.profileBody {
+    display: flex;
+    margin-top: 36px;
+
+    @include size-phone-large {
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+}
+
+.profileLeftBlock {
+    width: 284px;
+
+    @include size-phone-large {
+        width: 100%;
+    }
+}
+
+.profileRightBlock {
+    padding-left: 30px;
+    flex: 1;
+
+    @include size-phone-large {
+        padding-left: 0;
+        margin-top: 12px;
+        width: 100%;
+    }
+}
+
+.title {
+    padding-top: 60px;
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: #362e28;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+
+    @include size-phone-large {
+        padding-top: 24px;
+        font-size: 22px;
+        line-height: 27px;
+    }
+}

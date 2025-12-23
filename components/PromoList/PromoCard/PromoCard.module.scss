@@ -1,0 +1,106 @@
+@import "styles/mixins";
+
+/*
+.promoCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: calc(50% - 5px);
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 254px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include size-tablet {
+        width: 100%;
+    }
+
+    @include size-phone-large {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .promoImage {
+        width: calc(50% - 20px);
+        overflow: hidden;
+        position: relative;
+
+        img {
+            border-radius: 10px;
+        }
+
+        @include size-phone-large {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .promoContent {
+        width: calc(50% - 20px);
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+
+        @include size-phone-large {
+            width: 100%;
+        }
+
+        .title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #fff;
+            margin-bottom: 5px;
+
+            @include size-phone-large {
+                font-size: 20px;
+                line-height: 25px;
+                margin-bottom: 8px;
+            }
+        }
+
+        .description {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            color: #362e28;
+            margin-bottom: 20px;
+
+            @include size-phone-large {
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 8px;
+            }
+        }
+
+        .link {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 20px;
+            color: var(--primary);
+
+            @include size-phone-large {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+.promoCard::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(57.02deg, rgba(35, 35, 35, .53) 29.49%, rgba(35, 35, 35, 0) 73.09%);
+    pointer-events: none;
+}*/

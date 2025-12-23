@@ -1,0 +1,18 @@
+.preloaderBlock {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999999999;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .dotsHolder {
+        position: relative;
+        margin-top: 20px;
+    }
+}

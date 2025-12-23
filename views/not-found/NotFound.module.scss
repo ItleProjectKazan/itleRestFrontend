@@ -1,0 +1,29 @@
+@import "styles/mixins";
+
+/*.root {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 80%;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include size-tablet {
+        flex-wrap: wrap;
+    }
+
+    @include size-phone-large {
+        padding: 44px 18px 96px;
+        max-width: unset;
+    }
+}
+
+.text {
+    @include size-tablet {
+        order: 1;
+        margin-top: 28px;
+        text-align: center;
+    }
+}*/

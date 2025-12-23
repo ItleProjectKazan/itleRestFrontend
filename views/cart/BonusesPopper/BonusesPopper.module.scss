@@ -1,0 +1,48 @@
+@import "styles/mixins";
+
+$arrowSize: 12px;
+// -1 pixel to intersect content block
+$arrowPosition: -1 * ($arrowSize - 1px);
+
+.container {
+    z-index: 2;
+    width: 220px;
+
+    @include size-laptop {
+        width: 180px;
+    }
+}
+
+.arrow,
+.arrow::before {
+    position: absolute;
+    width: $arrowSize;
+}
+
+.arrow {
+    visibility: hidden;
+}
+
+.arrow::before {
+    visibility: visible;
+    content: "";
+    top: $arrowPosition;
+    right: $arrowPosition + 8px;
+    border-width: 0 $arrowSize $arrowSize;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: #c0bea8;
+}
+
+.block {
+    max-width: 216px;
+    width: 100%;
+    background: #c0bea8;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, .07);
+    border-radius: 6px;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--white);
+}

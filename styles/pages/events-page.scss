@@ -1,0 +1,296 @@
+.events-page {
+    width: 100%;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin-bottom: 75px !important;
+    display: flex;
+    flex-direction: column;
+
+    &__title.section-title {
+        margin-bottom: 50px;
+    }
+    .main-title {
+        display: none;
+    }
+    .breadcrumbs {
+        max-width: var(--container-width);
+        width: 100%;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    .events-list {
+        width: calc(100% + 15px);
+        margin: 0 -7.5px;
+
+        &__item {
+            width: 33.3%;
+            padding: 0 7.5px;
+            margin-bottom: 15px;
+
+            &-inner {
+                width: 100%;
+                position: relative;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 40px;
+                overflow: hidden;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    margin-top: 100%;
+                }
+            }
+            &-content {
+                width: 100%;
+                background-color: rgba(0, 0, 0, .4);
+                padding: 35px 35px 35px 0;
+            }
+            &-icon {
+                width: 50px;
+                min-width: 50px;
+                margin-right: 15px;
+            }
+            &-title {
+                color: #FFF;
+                font-size: 26px;
+                font-weight: 500;
+                line-height: 120%;
+                margin: 0 0 10px 0;
+            }
+            &-date {
+                color: rgba(255, 255, 255, .5);
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 120%;
+            }
+        }
+        &__buttons {
+            margin-left: 10px;
+
+            &-btn {
+                width: 64px;
+                height: 64px;
+                background-color: var(--primary);
+                cursor: pointer;
+                margin-right: 10px;
+
+                &:hover {
+                    background-color: var(--primary-light);
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                &.swiper-button-disabled {
+                    background-color: #1D1D1D !important;
+                    cursor: default;
+                }
+                span {
+                    font-size: 20px;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-big-desktop) {
+    .events-page {
+        margin-bottom: 50px !important;
+
+        .events-list {
+
+            &__buttons {
+
+                &-btn {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-big-laptop) {
+    .events-page {
+
+        &__title.section-title {
+            margin-bottom: 20px;
+        }
+        .events-list {
+
+            &__item {
+
+                &-inner {
+                    border-radius: 35px;
+                }
+                &-content {
+                    padding: 30px 30px 30px 0;
+                }
+                &-icon {
+                    width: 45px;
+                    min-width: 45px;
+                }
+                &-title {
+                    font-size: 24px;
+                }
+            }
+            &__buttons {
+
+                &-btn {
+                    width: 55px;
+                    height: 55px;
+
+                    span {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-laptop) {
+    .events-page {
+
+        &__title {
+            font-size: 30px;
+        }
+        .events-list {
+
+            &__item {
+
+                &-inner {
+                    border-radius: 30px;
+                }
+                &-content {
+                    padding: 20px 20px 25px 0;
+                }
+                &-icon {
+                    width: 40px;
+                    min-width: 40px;
+                }
+                &-title {
+                    font-size: 20px;
+                }
+            }
+            &__buttons {
+
+                &-btn {
+                    width: 50px;
+                    height: 50px;
+
+                    span {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .events-page {
+
+        &__title {
+            font-size: 24px;
+        }
+        .events-list {
+
+            &__item {
+
+                &-inner {
+                    border-radius: 25px;
+                }
+                &-content {
+                    padding: 10px 10px 15px 0;
+                }
+                &-icon {
+                    width: 30px;
+                    min-width: 30px;
+                }
+                &-title {
+                    font-size: 16px;
+                }
+            }
+            &__buttons {
+
+                &-btn {
+                    width: 45px;
+                    height: 45px;
+
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-phone-large) {
+    .events-page {
+
+        .events-list {
+
+            &__item {
+                width: 50%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-phone-medium) {
+    .events-page {
+
+        .events-list {
+            width: calc(100% + 10px);
+
+            &__item {
+                width: 50%;
+                padding: 0 5px;
+                margin-bottom: 10px;
+
+                &-inner {
+                    border-radius: 20px;
+                }
+                &-icon {
+                    width: 25px;
+                    min-width: 25px;
+                }
+                &-title {
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+                &-date {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 450px) {
+    .events-page {
+
+        &__title {
+            font-size: 24px;
+        }
+        .events-list {
+
+            &__item {
+                width: 100%;
+
+                &-inner {
+                    border-radius: 30px;
+                }
+                &-icon {
+                    width: 30px;
+                    min-width: 30px;
+                }
+                &-title {
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                }
+                &-date {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

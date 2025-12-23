@@ -1,0 +1,26 @@
+@import "styles/mixins";
+
+.container {
+    padding: 22px 15px;
+    background: transparent;
+
+    @include size-laptop {
+        padding: 20px 20px;
+    }
+
+    @include size-tablet {
+        padding: 15px 12px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.containerWrapContrast {
+    background-color: rgba(249, 245, 239, .8);
+}
+
+.containerBordered {
+    border-bottom: 1px solid var(--pink);
+}
+
+

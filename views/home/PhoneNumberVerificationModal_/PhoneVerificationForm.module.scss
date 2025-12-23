@@ -1,0 +1,32 @@
+@import "styles/mixins";
+
+.phoneInput {
+    max-width: 360px;
+    margin-top: 40px;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: #fff;
+    color: #988171;
+    border: 1px solid #e9ded0;
+    border-radius: 7px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+
+    @include size-phone-medium {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 35px;
+        font-size: 18px;
+    }
+}
+
+.btnGetCode {
+
+    @include size-phone-medium {
+        margin-top: 10px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 18px;
+    }
+}

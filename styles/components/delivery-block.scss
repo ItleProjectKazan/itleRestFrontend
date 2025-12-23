@@ -1,0 +1,39 @@
+.delivery-block {
+    padding: 0 10px;
+    color: #232323;/*dark theme #FFF*/
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 120%;
+    cursor: pointer;
+
+    &:hover {
+        border-color: var(--primary-border-light);
+    }
+    &__icon {
+        font-size: 20px;
+        color: #232323;/*dark theme #FFF*/
+        margin-right: 10px;
+    }
+    &__text {
+        margin-right: 4px;
+        color: var(--primary);
+    }
+    &__address {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-weight: 500;
+    }
+}
+@media (min-width: $breakpoint-laptop) and (max-width: 1300px) {
+    .delivery-block {
+        margin: 0 10px;
+    }
+}
+@media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop) {
+    .delivery-block {
+        margin: 0 8px;
+        width: 177px;
+    }
+}

@@ -1,0 +1,12 @@
+image: node:16.13.0
+
+stages:
+    - lint
+
+eslint:
+    stage: lint
+    script:
+        - npm ci
+        - npx eslint .
+        - npx stylelint components/**/*.scss styles views/**/*.scss
+        - npm run build

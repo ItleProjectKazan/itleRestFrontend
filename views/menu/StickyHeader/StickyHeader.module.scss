@@ -1,0 +1,101 @@
+@import "styles/mixins";
+
+.stickyHeader {
+    display: none;
+    height: 80px;
+    background: var(--pink-light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+
+    @include size-tablet {
+        padding: 0 10px;
+    }
+}
+
+.stickyHeaderVisible {
+    display: flex;
+
+    @include size-phone-large {
+        display: none;
+    }
+}
+
+.content {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    margin-left: 36px;
+    margin-right: 0;
+    max-width: fit-content;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.category {
+    text-align: center;
+    width: auto;
+
+    font-family: var(--font-montserrat);
+    font-size: 14px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 18px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    user-select: none;
+    color: var(--secondary);
+
+    &:hover {
+        color: var(--secondary-light);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 6px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+}
+
+.categoryLink {
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.categoryActive {
+
+    &::after {
+        background-color: var(--primary);
+    }
+}
+
+.cart {
+    align-self: center;
+    // when cart icon is over categories
+    margin-left: 10px;
+    background-color: var(--primary);
+
+    height: 40px;
+    width: 70px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // @include size-tablet {
+    //     display: none;
+    // }
+}

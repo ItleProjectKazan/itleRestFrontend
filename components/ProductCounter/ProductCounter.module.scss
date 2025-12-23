@@ -1,0 +1,60 @@
+@import "styles/mixins/adaptive";
+
+.root {
+    flex: 1 1 0;
+    justify-content: space-between;
+    background: var(--pink-light);
+    box-sizing: border-box;
+    border-radius: 14px;
+    width: 114px;
+    max-width: 114px;
+    height: 52px;
+
+    @include size-phone-small {
+        flex: 0;
+    }
+}
+
+.button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: -moz-box;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 13px;
+    cursor: pointer;
+    -webkit-transition: all 2ms ease-out;
+    -moz-transition: all 2ms ease-out;
+    transition: all 2ms ease-out;
+    flex-shrink: 0;
+    margin: 0 4px;
+    color: #fff;
+
+    svg {
+        stroke: currentColor;
+        flex-shrink: 0;
+    }
+}
+
+.buttonDisabled {
+    background-color: var(--grey);
+    color: var(--brown-0);
+    cursor: default;
+}
+
+.count {
+    color: #FFF;
+    //color: #232323;
+    font-family: var(--font-gotham);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 120%;
+    flex-grow: 1;
+    min-width: 40px;
+    text-align: center;
+}

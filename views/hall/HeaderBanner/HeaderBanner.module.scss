@@ -1,0 +1,86 @@
+@import "styles/mixins";
+
+.label {
+
+    max-width: var(--container-width);
+    margin: 0 auto;
+    margin-top: 60px;
+    font-family: var(--font-gotham);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 150px;
+
+    color: var(--green-text);
+
+    // @include size-tablet {
+    //     display: none;
+    // }
+}
+
+.container {
+    background: var(--pink-light);
+    padding: 30px 15px;
+}
+
+.bannerBlock {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--container-width);
+    border-radius: 40px;
+
+    flex-wrap: nowrap;
+    margin: 0 auto;
+
+    padding: 40px;
+
+    background: url(/images/hall/banner.jpg);
+    background-position: center;
+    background-size: cover;
+
+    height: 427px;
+
+    .breadcrumbs {
+        font-size: 12px;
+        line-height: 14px;
+        color: #c6c6c6;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 30px;
+
+        a {
+            color: #c6c6c6;
+        }
+
+        svg {
+            margin: 0 5px;
+        }
+    }
+
+    .bannerIntro {
+        font-family: var(--font-druk-wide-cy);
+        color: #fff;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+
+        max-width: 790px;
+        margin-bottom: 80px;
+
+        @include size-phone-large {
+            font-size: 33px;
+            line-height: 35px;
+        }
+    }
+
+    .btn {
+        display: inline-block;
+        width: 232px;
+        flex-shrink: 0;
+    }
+}

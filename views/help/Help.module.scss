@@ -1,0 +1,14 @@
+@import "styles/mixins";
+
+.holder {
+    padding: 40px;
+    border: solid 1px var(--primary);
+    border-radius: 40px;
+    margin-bottom: 40px;
+
+    h2 {
+        font-family: var(--font-druk-wide-cy);
+        font-style: normal;
+        font-weight: 400;
+    }
+}

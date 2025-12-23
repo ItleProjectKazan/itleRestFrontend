@@ -1,0 +1,247 @@
+.about-halal {
+    width: 100%;
+    background-image: url("~public/images/about-halal-bg.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: calc(100% - 75px);
+
+    &__inner {
+        width: 100%;
+    }
+    &__image {
+        width: 50%;
+        padding-right: 60px;
+
+        &-img {
+            width: calc(100% + 110px);
+            margin-left: - 110px;
+            //margin-top: -80px;
+        }
+    }
+    &__info {
+        width: 50%;
+
+        &-title.section-title {
+            display: block;
+            width: 100%;
+            margin-bottom: 35px;
+
+            br {
+                display: none;
+            }
+        }
+        &-image {
+            display: none;
+            margin-left: -15px;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        &-description {
+            width: 100%;
+            margin-bottom: 40px;
+
+            p {
+                margin-top: 0;
+                color: var(--primary-text);
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 120%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &-buttons {
+            margin-bottom: -15px;
+        }
+        &-btn {
+            height: 76px;
+            padding: 0 30px;
+            border-radius: 20px;
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 500;
+            margin-right: 20px;
+            cursor: pointer;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            &--primary {
+                border: 1px solid var(--primary);
+                background-color: var(--primary);
+
+                &:hover {
+                    border-color: var(--primary-light);
+                    background-color: var(--primary-light);
+                }
+            }
+            &--border {
+                border: 1px solid var(--primary);/*dark theme var(--white)*/
+                color: #232323;/*dark theme none*/
+                background-color: var(--white);
+
+                &:hover {
+                    border-color: var(--primary-light);/*dark theme var(--primary)*/
+                }
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-big-desktop) {
+    .about-halal {
+
+        &__image {
+            padding-right: 50px;
+
+            &-img {
+                width: calc(100% + 70px);
+                margin-left: -70px;
+            }
+        }
+        &__info {
+
+            &-description {
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-desktop) {
+    .about-halal {
+
+        &__image {
+            padding-right: 25px;
+
+            &-img {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        &__info {
+
+            &-title.section-title {
+                margin-bottom: 20px;
+            }
+            &-description {
+                margin-bottom: 20px;
+
+                p {
+                    font-size: 16px;
+                }
+            }
+            &-btn {
+                height: 60px;
+                margin-right: 15px;
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-laptop) {
+    .about-halal {
+
+        &__image {
+            width: 40%;
+            padding-right: 15px;
+
+            &-img {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        &__info {
+            width: 60%;
+
+            &-title.section-title {
+                font-size: 30px;
+            }
+            &-description {
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: $breakpoint-phone-large) and (max-width: $breakpoint-tablet) {
+    .about-halal {
+
+        &__info {
+
+            &-title.section-title {
+                font-size: 24px;
+            }
+            &-description {
+
+                p {
+                    font-size: 16px;
+                }
+            }
+            &-btn {
+                padding: 0 15px;
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-phone-large) {
+    .about-halal {
+
+        &__image {
+            display: none;
+        }
+        &__info {
+            width: 100%;
+
+            &-title.section-title {
+                font-size: 28px;
+            }
+            &-image {
+                display: block;
+            }
+            &-description {
+
+                p {
+                    font-size: 18px;
+                }
+            }
+            &-btn {
+                padding: 0 15px;
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-phone-medium) {
+    .about-halal {
+
+        &__info {
+
+            &-title.section-title {
+
+                br {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 450px) {
+    .about-halal {
+
+        &__info {
+
+            &-title.section-title {
+                font-size: 24px;
+            }
+            &-btn {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    }
+}

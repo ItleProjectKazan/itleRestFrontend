@@ -1,0 +1,66 @@
+@import "styles/mixins";
+
+.addressFields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.width40 {
+    width: 40%;
+
+    @include size-big-laptop {
+        width: 50%;
+    }
+
+    @include size-phone-large {
+        width: 100%;
+    }
+}
+
+.width50 {
+    width: 50%;
+}
+
+.width20 {
+    width: 20%;
+
+    @include size-big-laptop {
+        width: 25%;
+    }
+    @include size-tablet {
+        width: 50%;
+    }
+    @include size-phone-large {
+        width: 100%;
+    }
+    @include size-phone-medium {
+        width: 33.33%;
+    }
+    @include size-phone-small {
+        width: 50%;
+    }
+}
+
+.width25 {
+    width: 25%;
+}
+
+.blockContent {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include size-tablet {
+
+        div {
+            flex-grow: 1;
+        }
+    }
+}

@@ -1,0 +1,212 @@
+.order-status {
+    width: 100%;
+    padding: 0 !important;
+    margin-bottom: 75px !important;
+    margin-top: 0 !important;
+    display: flex;
+    flex-direction: column;
+
+    .main-title {
+        display: none;
+    }
+    .breadcrumbs {
+        max-width: var(--container-width);
+        width: 100%;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    &__inner {
+        width: 100%;
+    }
+    &__info {
+        width: 50%;
+        padding-right: 15px;
+
+        &-title.section-title {
+            margin-bottom: 50px;
+            color: #232323;/*dark theme #FFF*/
+        }
+        &-number {
+            min-height: 44px;
+            padding: 3px 15px;
+            border-radius: 14px;
+            border: 1px solid #968B88;
+            color: #232323;
+            font-family: var(--font-druk-wide-cy);
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            span {
+                color: var(--primary);
+            }
+        }
+        &-details {
+            min-height: 44px;
+            padding: 3px 15px;
+            border-radius: 14px;
+            background-color: #232323;
+            color: #FFF;
+            font-family: var(--font-druk-wide-cy);
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &-text {
+            margin: 45px 0;
+            width: 100%;
+            color: #606060;
+            font-family: var(--font-gotham);
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 120%;
+        }
+        &-btn {
+            height: 60px;
+            padding: 0 25px;
+            border-radius: 16px;
+            background-color: var(--primary);
+            color: #FFF;
+            font-family: var(--font-gotham);
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--primary-light);
+            }
+        }
+    }
+    &__image {
+        width: 50%;
+
+        img {
+            width: 100%;
+            margin-left: 55px;
+        }
+    }
+}
+@media (max-width:  $breakpoint-big-desktop) {
+    .order-status {
+        margin-bottom: 50px !important;
+
+        &__info {
+
+            &-title.section-title {
+                margin-bottom: 40px;
+            }
+            &-number {
+                min-height: 40px;
+                font-size: 16px;
+            }
+            &-details {
+                min-height: 40px;
+                font-size: 16px;
+            }
+            &-text {
+                margin: 40px 0;
+                font-size: 20px;
+            }
+        }
+        &__image {
+
+            img {
+                margin-left: 0;
+            }
+        }
+    }
+}
+@media (max-width:  $breakpoint-laptop) {
+    .order-status {
+
+        &__info {
+            width: 65%;
+
+            &-title.section-title {
+                margin-bottom: 30px;
+            }
+            &-number {
+                min-height: 36px;
+                font-size: 15px;
+            }
+            &-details {
+                min-height: 36px;
+                font-size: 15px;
+            }
+            &-text {
+                margin: 30px 0;
+                font-size: 18px;
+            }
+        }
+        &__image {
+            width: 35%;
+        }
+    }
+}
+@media (max-width:  $breakpoint-tablet) {
+    .order-status {
+
+        &__info {
+            width: 65%;
+
+            &-title.section-title {
+                margin-bottom: 25px;
+            }
+            &-number {
+                min-height: 34px;
+                font-size: 14px;
+                border-radius: 12px;
+            }
+            &-details {
+                min-height: 34px;
+                font-size: 14px;
+                border-radius: 12px;
+            }
+            &-text {
+                margin: 25px 0;
+                font-size: 16px;
+            }
+        }
+        &__image {
+            width: calc(35% + 30px);
+            margin-left: - 30px;
+        }
+    }
+}
+@media (max-width:  $breakpoint-phone-large) {
+    .order-status {
+
+        &__info {
+            width: 70%;
+        }
+        &__image {
+            width: calc(30% + 30px);
+        }
+    }
+}
+@media (max-width:  $breakpoint-phone-medium) {
+    .order-status {
+
+        &__info {
+            width: 100%;
+            padding-right: 0;
+
+            &-title.section-title {
+                margin-bottom: 20px;
+            }
+            &-number {
+                font-size: 12px;
+            }
+            &-details {
+                font-size: 14px;
+            }
+            &-text {
+                margin: 20px 0;
+                font-size: 14px;
+            }
+        }
+        &__image {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+export enum PageLinks {
+    ROUTER_HOME_DEFAULT = '/[localitySlug]',
+    HOME = '/',
+    CART = '/cart',
+    CHECKOUT = '/checkout',
+    CONTACTS = '/contacts',
+    INFO_RULES = 'https://docs.google.com/document/d/1hlgipIl-sGg9dTZ8IxU3x5vMGgqfoEXz1auhlYouB3E',
+    INFO_PRIVACY = 'https://docs.google.com/document/d/1FN4xpOpMn-T37WT_5MBk5AbXB8kbITAvdef6BTnwsvM',
+    INFO_AGREEMENT = 'https://docs.google.com/document/d/148f3MX-3hnvVny7hb9l8JrPPz6bwGfxhY3pE5RF538c',
+    INFO_LEGAL = '/info/legal',
+    ORDER_STATUS = '/order-status/:orderId',
+    PROFILE = '/profile',
+    MENU = '/menu',
+    ABOUT = '/about',
+    INTERIOR = '/interior',
+    NEWS = '/events',
+    OUR_CAFES = '/address',
+    DELIVERY = '/delivery',
+    PROMOS = '/promos',
+    VACANCY = '/vacancy',
+}
+export const getMenuLink = (id?: number | null) => (id ? PageLinks.MENU + '/' + id : PageLinks.MENU)

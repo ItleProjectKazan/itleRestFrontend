@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "CoFo Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local("CoFo Sans"),
+        url("~fonts/CoFoSans/CoFoSans-Regular.woff2") format("woff2"),
+        url("~fonts/CoFoSans/CoFoSans-Regular.woff") format("woff"),
+        url("~fonts/CoFoSans/CoFoSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CoFo Sans";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: local("CoFo Sans"),
+        url("~fonts/CoFoSans/CoFoSans-Medium.woff2") format("woff2"),
+        url("~fonts/CoFoSans/CoFoSans-Medium.woff") format("woff"),
+        url("~fonts/CoFoSans/CoFoSans-Medium.ttf") format("truetype");
+
+}
+
+@font-face {
+    font-family: "CoFo Sans";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: local("CoFo Sans"),
+        url("~fonts/CoFoSans/CoFoSans-Bold.woff2") format("woff2"),
+        url("~fonts/CoFoSans/CoFoSans-Bold.woff") format("woff"),
+        url("~fonts/CoFoSans/CoFoSans-Bold.ttf") format("truetype");
+
+}
+
+@font-face {
+    font-family: "CoFo Sans";
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    src: local("CoFo Sans"),
+        url("~fonts/CoFoSans/CoFoSans-Black.woff2") format("woff2"),
+        url("~fonts/CoFoSans/CoFoSans-Black.woff") format("woff"),
+        url("~fonts/CoFoSans/CoFoSans-Black.ttf") format("truetype");
+
+}
+
+@font-face {
+    font-family: "Appetite";
+    src: local("Appetite"),
+        url("~fonts/Appetite/Appetite.woff2") format("woff2"),
+        url("~fonts/Appetite/Appetite.woff") format("woff"),
+        url("~fonts/Appetite/Appetite.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"),
+        url("~fonts/Montserrat/Montserrat-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Druk";
+    src: local("Druk"),
+        url("~fonts/Druk/Druk.woff2") format("woff2"),
+        url("~fonts/Druk/Druk.woff") format("woff"),
+        url("~fonts/Druk/Druk.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Gotham";
+    src: local("Gotham"),
+        url("~fonts/Gotham/Gotham.woff2") format("woff2"),
+        url("~fonts/Gotham/Gotham.woff") format("woff"),
+        url("~fonts/Gotham/Gotham.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Druk Wide Cy";
+    src: local("Druk Wide Cy"),
+        url("~fonts/DrukWideCy/DrukWideCy.woff2") format("woff2"),
+        url("~fonts/DrukWideCy/DrukWideCy.woff") format("woff"),
+        url("~fonts/DrukWideCy/DrukWideCy.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

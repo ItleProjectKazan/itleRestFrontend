@@ -1,0 +1,11 @@
+@import "mixins/adaptive";
+@import "mixins/adaptive-font";
+
+@mixin line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    overflow: hidden;
+}

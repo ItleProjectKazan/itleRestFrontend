@@ -1,0 +1,14 @@
+@import "styles/mixins";
+
+.not_available {
+    color: var(--primary);
+    font-weight: 700;
+    margin: 40px 0;
+}
+
+/*
+.promoList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}*/

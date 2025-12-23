@@ -1,0 +1,112 @@
+@import "styles/mixins";
+
+.title {
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: #362e28;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+
+    @include size-phone-large {
+        padding-top: 24px;
+        font-size: 22px;
+        line-height: 27px;
+    }
+}
+
+.formBlock {
+    margin-bottom: 24px;
+
+    :global(.form-grid) {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 0 20px;
+        grid-template-areas:
+            "wide wide"
+            ". .";
+    }
+
+    :global(.grid-wide) {
+        grid-area: wide;
+    }
+
+    :global(.select) {
+        width: 100%;
+    }
+
+    :global(.react-select__menu) {
+        top: calc(100% + 2px);
+        width: 100%;
+        padding: 5px;
+        border-radius: 14px;
+    }
+
+    :global(.react-select__control) {
+        max-width: none;
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    :global(.react-select__value-container) {
+        padding: 0;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    :global(.react-select__indicator),
+    :global(.react-select__dropdown-indicator),
+    :global(.indicatorContainer) {
+        padding: 0;
+    }
+
+    :global(.react-select__option) {
+        padding: 20px;
+
+        &:first-of-type {
+            border-top: none;
+        }
+
+        &:last-of-type {
+            border: none;
+        }
+    }
+
+    :global(.react-select__option--is-focused),
+    :global(.react-select__option--is-active),
+    :global(.react-select__option--is-selected) {
+        border-color: transparent;
+        border-radius: 7px;
+        background: var(--pink);
+    }
+
+    .inputBlock {
+        margin-top: 20px;
+    }
+}
+
+.formBlockHeader {
+    color: #362e28;
+    margin-bottom: 8px;
+}
+
+.timeSelectBlock {
+    margin-bottom: 20px;
+}
+
+.agreementCheckbox {
+    align-items: flex-start;
+}
+
+.checkboxLabel {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #362e28;
+    margin-top: -3px;
+
+    a {
+        font-weight: 500;
+        color: var(--light-green)
+    }
+}

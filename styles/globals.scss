@@ -1,0 +1,293 @@
+@import "~react-toastify/scss/main.scss";
+
+@import "normalize";
+@import "variables";
+@import "fonts";
+@import "icons";
+@import "display";
+@import "spacing";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html, body, #__next {
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+ul li {
+    list-style: none;
+}
+button {
+    background: none;
+    border: 0;
+}
+body {
+    //background-color: var(--white);
+    background-color: var(--body-background);
+    font-family: "Gotham", Helvetica, sans-serif;
+    font-size: 16px;
+    color: var(--brown-dark);
+}
+a {
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        text-decoration: none;
+        outline: none;
+    }
+}
+.noselect,
+img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.transition {
+    -webkit-transition: .3s linear all;
+    -moz-transition: .3s linear all;
+    -o-transition: .3s linear all;
+    transition: .3s linear all;
+}
+.no-scroll {
+    overflow: hidden;
+}
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    padding: 0 15px;
+    margin: 0 auto;
+
+    @media (max-width: 1300px) {
+        max-width: 100%;
+    }
+}
+.section-page {
+    width: 100%;
+    margin: 75px 0;
+}
+p {
+    margin-top: 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.section-title {
+    color: #232323;/*dark theme #FFF*/
+    font-family: var(--font-druk-wide-cy);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin: 0;
+
+    span {
+        color: var(--primary);
+    }
+}
+body {
+    padding-top: 100px;
+}
+.cancel-button {
+    background-color: #585858 !important;
+    border: 1px solid #585858 !important;
+}
+.react-select__menu-portal {
+    z-index: 10 !important;
+}
+@media (max-width: $breakpoint-big-desktop) {
+    .section-page {
+        margin: 60px 0;
+    }
+    .section-title {
+        font-size: 36px;
+    }
+}
+@media (max-width: $breakpoint-laptop) {
+    .section-page {
+        margin: 50px 0;
+    }
+    .section-title {
+        font-size: 32px;
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .section-page {
+        margin: 40px 0;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+}
+@media (max-width: $breakpoint-phone-large) {
+    body {
+        padding-top: 95px;
+    }
+    .section-page {
+        margin: 35px 0;
+    }
+}
+@media (max-width: $breakpoint-phone-medium) {
+    body {
+        padding-top: 85px;
+    }
+    .section-page {
+        margin: 30px 0;
+    }
+}
+@media (max-width: $breakpoint-phone-medium) {
+    .section-title {
+        font-size: 26px;
+    }
+}
+@media (max-width: $breakpoint-phone-small) {
+    .section-title {
+        font-size: 24px;
+    }
+}
+.main-title {
+    margin: 20px 0 50px 0;
+    font-size: 40px;
+    font-family: var(--font-druk-wide-cy);
+    font-weight: 700;
+    text-transform: uppercase;
+    //color: var(--white);dark theme
+    color: #232323;
+
+    h2 {
+        margin: 0 0 50px 0;
+        font-size: 40px;
+        font-family: var(--font-druk-wide-cy);
+        font-weight: 700;
+        text-transform: uppercase;
+        //color: var(--white);dark theme
+        color: #232323;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    span {
+        margin-right: 15px;
+    }
+    .orange {
+        //color: var(--white);dark theme
+        color: #232323;
+    }
+
+    @include size-tablet {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: $breakpoint-big-laptop) {
+    .main-title {
+        margin: 20px 0 40px 0;
+        font-size: 36px;
+
+        h2 {
+            font-size: 36px;
+        }
+    }
+}
+@media (max-width: $breakpoint-laptop) {
+    .main-title {
+        margin: 20px 0 35px 0;
+        font-size: 30px;
+
+        h2 {
+            font-size: 30px;
+        }
+    }
+}
+@media (max-width: $breakpoint-tablet) {
+    .main-title {
+        margin: 20px 0 25px 0;
+        font-size: 24px;
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+}
+@media (max-width: $breakpoint-phone-large) {
+    .main-title {
+        font-size: 22px;
+
+        h2 {
+            font-size: 22px;
+        }
+    }
+}
+@media (max-width: $breakpoint-phone-medium) {
+    .main-title {
+        font-size: 20px;
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .main-title {
+        font-size: 18px;
+
+        h2 {
+            font-size: 18px;
+        }
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select:focus, textarea:focus, input:focus {
+        font-size: 16px !important;
+    }
+    select, textarea, input {
+        font-size: 16px !important;
+    }
+}
+@import "content";
+@import "components/header";
+@import "components/footer";
+@import "components/delivery-block";
+@import "components/main-banner";
+@import "components/advantages";
+@import "components/atmosphere-comfort";
+@import "components/categories-info";
+@import "components/about-halal";
+@import "components/events";
+@import "components/guest-rating";
+@import "components/modal";
+@import "components/breadcrumbs";
+@import "components/product-modal";
+@import "components/calendar";
+@import "components/register";
+@import "components/booking-modal";
+@import "components/halal-info";
+@import "components/mobile-menu";
+@import "components/institution-info";
+
+@import "pages/delivery-payment";
+@import "pages/error-page";
+@import "pages/profile-page";
+@import "pages/about-page";
+@import "pages/promoitions-page";
+@import "pages/menu-page";
+@import "pages/interior-page";
+@import "pages/address-page";
+@import "pages/events-page";
+@import "pages/institution-page";
+@import "pages/checkout-page";
+@import "pages/event-page";
+@import "pages/contacts-page";
+@import "pages/vacancy-page";
+@import "pages/order-status";

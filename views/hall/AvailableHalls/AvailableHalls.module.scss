@@ -1,0 +1,192 @@
+@import "styles/mixins";
+
+.availableHalls {
+    margin-top: 80px;
+
+    @include size-tablet {
+        margin-top: 40px;
+    }
+}
+
+.header {
+    font-family: var(--font-druk-wide-cy);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--dark);
+
+    span {
+        color: var(--primary);
+    }
+
+    @include size-tablet {
+        font-size: 24px;
+    }
+}
+
+.hall {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 40px;
+    padding: 48px;
+
+    @include size-tablet {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+.left {
+    flex-basis: 50%;
+
+    .spaciousness {
+        font-family: var(--font-gotham);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        color: var(--red-250);
+
+        @include size-tablet {
+            font-size: 12px;
+        }
+    }
+
+    .address {
+        margin-top: 30px;
+        font-family: var(--font-gotham);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        color: var(--dark);
+
+        @include size-tablet {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+    }
+
+    .openMapBtn {
+        margin-top: 15px;
+        background-color: var(--white);
+        color: var(--dark);
+        border: 1px solid var(--primary);
+
+        @include size-tablet {
+            font-size: 10px;
+        }
+    }
+
+    .shedule {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        @include size-tablet {
+            margin-top: 15px;
+        }
+
+        .day {
+            margin-right: 6px;
+            margin-bottom: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            width: min-content;
+            min-height: 80px;
+
+            background: var(--pink-light);
+            border-radius: 14px;
+
+
+            font-family: var(--font-gotham);
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 120%;
+            text-align: center;
+
+            color: var(--dark);
+
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            div {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            .name {
+                font-weight: 400;
+            }
+
+            .from {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .to {
+                padding-top: 7px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-top: 1px solid var(--light-brown);
+            }
+
+            .free {
+                font-weight: 400;
+                color: var(--grey-medium);
+                border-top: 1px solid var(--light-brown);
+                padding-top: 7px;
+            }
+
+            @include size-tablet {
+                font-size: 8px;
+                margin-right: 1px;
+                margin-bottom: 1px;
+
+                padding-left: 5px;
+                padding-right: 5px;
+
+                min-height: 60px;
+
+                div {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    .reserveBtn {
+        margin-top: 30px;
+        padding-top: 27px;
+        padding-bottom: 27px;
+
+        @include size-tablet {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+
+}
+
+.right {
+    padding-left: 40px;
+
+    @include size-tablet {
+        margin-top: 10px;
+        padding-left: 0;
+    }
+
+    flex-basis: 50%;
+}

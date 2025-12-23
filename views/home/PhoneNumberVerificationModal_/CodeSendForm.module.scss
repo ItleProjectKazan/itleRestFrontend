@@ -1,0 +1,81 @@
+@import "styles/mixins";
+
+/* Chrome, Safari, Edge, Opera */
+
+.codeInput::-webkit-outer-spin-button,
+.codeInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+
+.codeInput[type=number] {
+    -moz-appearance: textfield;
+}
+
+.codeInputs {
+    max-width: 260px;
+    height: 60px;
+    margin: 40px auto 0 auto;
+
+    @include size-phone-medium {
+        margin-top: 30px;
+    }
+}
+
+.codeInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #e9ded0;
+    border-radius: 7px;
+    text-align: center;
+    font-weight: medium;
+    font-size: 26px;
+    line-height: 20px;
+
+    & + & {
+        margin-left: 10px;
+    }
+
+    @include size-phone-medium {
+        font-size: 24px;
+    }
+}
+
+.codeInputSelected {
+    outline: none;
+    border: 2px solid #6a893e;
+}
+
+button.btnGetNewCode {
+    margin-top: 40px;
+    background-color: #9b3d30;
+
+    @include size-phone-medium {
+        margin-top: 20px;
+    }
+}
+
+button.btnCounter {
+    background-color: #cd9e97;
+}
+
+.incorrectCodeInput {
+    background-color: #ffe4de;
+    color: #ec5956;
+    border: 2px solid #f4b8b0;
+}
+
+.incorrectCodeText {
+    color: #ec5956;
+    font-weight: medium;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include size-phone-medium {
+        font-size: 14px;
+    }
+}

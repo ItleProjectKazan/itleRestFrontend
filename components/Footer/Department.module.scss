@@ -1,0 +1,22 @@
+.department {
+    display: flex;
+    flex-direction: column;
+
+    & + & {
+        margin-left: 58px;
+    }
+}
+
+.name {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color:#8c8c8c;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+}

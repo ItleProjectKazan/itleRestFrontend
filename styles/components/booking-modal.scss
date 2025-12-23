@@ -1,0 +1,224 @@
+.booking-modal {
+    width: 730px;
+    max-width: calc(100% - 40px) !important;
+    min-width: auto !important;
+    padding: 20px 30px 30px 30px;
+
+    &__fields {
+        width: 100%;
+        margin-top: 20px;
+    }
+    &__field {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+
+        &--select {
+
+            & > div {
+                margin: 0 5px;
+                width: 100%;
+                position: relative;
+                border-radius: 14px;
+
+                .select-label {
+                    position: absolute;
+                    left: 15px;
+                    top: 11px;
+                    font-family: var(--font-gotham);
+                    //color: #606060;dark theme
+                    color: #232323;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 120%;
+                    //z-index: 125;
+                }
+                .react-select__control {
+                    font-weight: bolder;
+                    cursor: pointer;
+                    width: 100%;
+                    max-width: none;
+                    padding: 16px 5px 0 5px;
+                    display: inline-flex;
+                    border-radius: 14px;
+                    //border: 1px solid #3d3d3d;dark theme
+                    border: 1px solid #E8DDDB;
+                    //background-color: #151515;dark theme
+                    background-color: #FFF;
+                    box-shadow: none;
+                    height: 66px;
+                }
+            }
+        }
+        &--comment {
+            width: calc(100% - 5px);
+
+            & > div {
+                margin: 0 5px 0 0;
+                width: 100%;
+                position: relative;
+
+                .textarea-label {
+                    position: absolute;
+                    left: 20px;
+                    top: 11px;
+                    font-family: var(--font-gotham);
+                    //color: #606060;dark theme
+                    color: #232323;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 120%;
+                    //z-index: 125;
+                }
+                .text-input {
+                    font-weight: bolder;
+                    cursor: pointer;
+                    width: 100%;
+                    max-width: none;
+                    padding: 30px 5px 0 5px;
+                    display: inline-flex;
+                    border-radius: 14px;
+                    //border: 1px solid #3d3d3d;dark theme
+                    border: 1px solid #E8DDDB;
+                    //background-color: #151515;dark theme
+                    background-color: #FFF;
+                    box-shadow: none;
+                    min-height: 66px;
+                    transition: .3s linear all;
+
+                    &:hover,
+                    &:focus {
+                        border-color: #B6ABA9;
+                    }
+                    textarea {
+                        resize: vertical;
+                        background-color: transparent;
+                        border: none;
+                        padding: 0 10px 10px 10px;
+                        font-family: var(--font-gotham);
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 120%;
+                        //color: #fff;dark theme
+                        color: #232323;
+                    }
+                }
+            }
+        }
+        .text-input {
+            margin: 0 5px;
+            width: 100%;
+            //background: #0f0f0f;dark theme
+            background: #FFF;
+            //border: 1px solid #292929;dark theme
+            border-radius: 14px;
+            display: flex;
+            flex-direction: column;
+            padding: 11px 15px;
+            align-items: flex-start;
+            transition: .3s linear all;
+
+            /*&:hover,
+            &:focus {
+                border-color: #B6ABA9;
+            }*/
+            &  > div {
+                display: flex;
+                flex-direction: column;
+                border: none;
+
+                label {
+                    font-family: var(--font-gotham);
+                    //color: #606060;dark theme
+                    color: #232323;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
+                input {
+                    width: 100%;
+                    height: 22px;
+                    margin-top: 6px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    font-family: var(--font-gotham);
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 120%;
+                    //color: #fff;dark theme
+                    color: #232323;
+                    padding: 0;
+                    border-radius: 0;
+
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    &__bottom {
+        width: 100%;
+        margin-top: 15px;
+        padding: 0 5px;
+
+        &-link {
+            color: #606060;
+            text-decoration: underline;
+            
+            &:hover {
+                color: #232323;
+                text-decoration: none;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .booking-modal {
+
+        &__field {
+
+            &--comment {
+                margin-right: 5px;
+            }
+        }
+        &__bottom {
+            flex-wrap: wrap;
+
+            button {
+                order: 2;
+                margin-right: 0;
+                margin-top: 15px;
+            }
+            & > div {
+                order: 1;
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .booking-modal {
+        padding: 20px 10px 20px 10px;
+
+        &__fields {
+            margin-top: 15px;
+        }
+        &__field {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        &__bottom {
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

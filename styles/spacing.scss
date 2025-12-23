@@ -1,0 +1,42 @@
+@import "mixins";
+
+$sides: (
+    "top": "t",
+    "right": "r",
+    "bottom": "b",
+    "left": "l",
+);
+
+@each $side, $letter in $sides {
+    @for $px from 1 through 10 {
+        .m#{$letter}-#{$px * 4} {
+            margin-#{$side}: #{$px * 4}px !important;
+        }
+
+        .p#{$letter}-#{$px * 4} {
+            padding-#{$side}: #{$px * 4}px !important;
+        }
+    }
+}
+
+.mv-50 {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+.mv-phone-large-0 {
+    @include size-phone-large {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.px-md-0 {
+    @include size-phone-medium {
+        padding: 0 !important;
+    }
+}

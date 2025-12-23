@@ -1,0 +1,21 @@
+@import "styles/mixins";
+
+.diamond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.diamondPrimary {
+    background-image: url("/images/diamond-red.svg");
+}
+
+.diamondSecondary {
+    background-image: url("/images/diamond-green.svg");
+}

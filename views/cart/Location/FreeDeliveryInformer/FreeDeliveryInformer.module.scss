@@ -1,0 +1,40 @@
+@import "styles/mixins";
+
+.informerHolder {
+    padding: 11px 22px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--pink-light);
+    color: var(--brown-dark);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+
+    svg {
+        flex-shrink: 0;
+        height: 25px;
+        width: 26px;
+        fill: var(--primary);
+        margin-right: 11px;
+    }
+
+    span {
+        font-weight: 700;
+        margin-left: 3px;
+        flex-shrink: 0;
+    }
+
+    @include size-phone-large {
+        padding: 8px 13px;
+        font-size: 12px;
+        line-height: 15px;
+
+        svg {
+            height: 18px;
+            width: 18px;
+        }
+    }
+}

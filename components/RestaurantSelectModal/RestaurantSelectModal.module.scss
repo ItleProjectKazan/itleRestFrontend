@@ -1,0 +1,99 @@
+@import "styles/mixins";
+
+.container {
+    composes: container from "Common.module.scss";
+}
+
+.pickup_location_selected_holder {
+
+    composes: container from "Common.module.scss";
+
+    @include size-phone-large {
+        background: #fff;
+        z-index: 20;
+        max-width: none;
+        margin: 0;
+        padding: 0 12px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+}
+
+.orderTypeSelect {
+    margin-bottom: 32px;
+}
+
+.localitySelect {
+    margin-top: 16px;
+}
+
+.locationSearch {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 10px;
+    margin-top: 6px;
+
+    @include size-phone-large {
+        grid-template-columns: 1fr;
+        row-gap: 12px;
+    }
+}
+
+.selectedLocation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+    @include size-phone-large {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        margin-top: 12px;
+    }
+}
+
+.loader {
+    display: flex;
+    height: 360px;
+    justify-content: center;
+    align-items: center;
+}
+
+.map {
+    width: 100%;
+}
+
+.selectButton {
+    flex-shrink: 0;
+    height: 50px;
+
+    @include size-phone-large {
+        position: sticky;
+        bottom: 0;
+        z-index: 9999;
+    }
+}
+
+.restaurantSelectHeader {
+    font-size: 16px;
+    font-weight: 500;
+    //color: var(--white);dark theme
+    color: var(--primary);
+
+    @include size-more-than-phone-medium {
+        font-size: 14px;
+    }
+}
+
+.pickUpAdressHeader {
+
+    @include size-phone-large {
+        display: none;
+    }
+}
+
+.deliverHere {
+    height: 50px;
+    align-self: flex-start;
+}

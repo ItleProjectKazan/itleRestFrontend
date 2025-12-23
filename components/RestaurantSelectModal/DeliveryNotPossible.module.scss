@@ -1,0 +1,25 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 42px;
+    margin-bottom: 42px;
+}
+
+.description {
+    margin-top: 18px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+
+    > * + * {
+        margin-left: 14px;
+    }
+}

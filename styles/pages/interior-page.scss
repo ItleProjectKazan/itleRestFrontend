@@ -1,0 +1,391 @@
+.interior-page {
+    width: 100%;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin-bottom: 75px !important;
+    display: flex;
+    flex-direction: column;
+
+    &__title.section-title {
+        margin-bottom: 35px;
+        //color: #FFF;dark theme
+        color: #232323;
+    }
+    .main-title {
+        display: none;
+    }
+    .breadcrumbs {
+        max-width: var(--container-width);
+        width: 100%;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    &__text {
+        width: 100%;
+
+        p {
+            color: #606060;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 120%;
+        }
+    }
+    &__restaurants {
+        width: 100%;
+        margin-top: 50px;
+    }
+    &__restaurant {
+        width: calc(50% - 7.5px);
+        margin-bottom: 25px;
+
+        .restaurant {
+            width: 100%;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 40px;
+            overflow: hidden;
+            margin-bottom: 10px;
+
+            &:before {
+                content: '';
+                display: block;
+                margin-top: 54.2%;
+            }
+            &__inner {
+                width: 100%;
+                background-color: rgba(0, 0, 0, .4);
+                padding: 35px 50px 50px 0;
+            }
+            &__icon {
+                width: 50px;
+                min-width: 50px;
+                margin-right: 15px;
+            }
+            &__info {
+                width: 100%;
+
+                &-address {
+                    color: #FFF;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 120%;
+                    margin-bottom: 15px;
+                }
+                &-title {
+                    width: 100%;
+                    color: var(--white);
+                    font-family: var(--font-druk-wide-cy);
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 120%;
+                    text-transform: uppercase;
+                    padding-top: 15px;
+                    position: relative;
+                    margin: 0 0 15px 0;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        right: -50px;
+                        height: 1px;
+                        background-color: var(--primary);
+                    }
+                    span {
+                        display: block;
+                        width: 100%;
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+    }
+    &__map {
+        width: 100%;
+
+        .institution-info {
+            margin: 0;
+
+            .container {
+                padding: 0;
+            }
+            &__block {
+                border-radius: 40px;
+                min-height: 400px;
+
+                .details {
+                    left: 15px;
+                    top: 15px;
+                    right: auto;
+                    bottom: auto;
+                    padding: 15px;
+                    width: calc(100% - 30px);
+                    border-radius: 20px;
+
+                    &__top {
+                        margin-bottom: 15px;
+                    }
+                    &__address {
+                        font-size: 18px;
+                    }
+                    .schedule {
+                        margin-top: 15px;
+                    }
+                }
+                &-link {
+                    display: flex;
+                }
+                &-buttons {
+                    right: 15px;
+                    bottom: 35px;
+                }
+                &-btn {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:  $breakpoint-big-desktop) {
+    .interior-page {
+        margin-bottom: 50px !important;
+    }
+}
+@media (max-width: $breakpoint-big-laptop) {
+    .interior-page {
+
+        &__restaurants {
+            margin-top: 45px;
+        }
+        &__restaurant {
+
+            .restaurant {
+                border-radius: 35px;
+
+                &__inner {
+                    padding: 30px 45px 45px 0;
+                }
+                &__icon {
+                    width: 45px;
+                    min-width: 45px;
+                }
+                &__info {
+
+                    &-title {
+                        font-size: 24px;
+                        padding-top: 10px;
+                        margin: 0 0 10px 0;
+
+                        &:before {
+                            right: -45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:  $breakpoint-laptop) {
+    .interior-page {
+
+        &__restaurants {
+            margin-top: 40px;
+        }
+        &__restaurant {
+
+            .restaurant {
+                border-radius: 30px;
+
+                &__inner {
+                    padding: 25px 40px 40px 0;
+                }
+                &__icon {
+                    width: 40px;
+                    min-width: 40px;
+                }
+                &__info {
+
+                    &-title {
+                        font-size: 20px;
+
+                        &:before {
+                            right: -40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:  $breakpoint-tablet) {
+    .interior-page {
+
+        &__restaurants {
+            margin-top: 35px;
+        }
+        &__restaurant {
+
+            .restaurant {
+                border-radius: 25px;
+
+                &__inner {
+                    padding: 20px 35px 35px 0;
+                }
+                &__icon {
+                    width: 30px;
+                    min-width: 30px;
+                }
+                &__info {
+
+                    &-title {
+                        font-size: 16px;
+
+                        &:before {
+                            right: -35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:  $breakpoint-phone-large) {
+    .interior-page {
+
+        &__restaurants {
+            margin-top: 30px;
+        }
+        &__restaurant {
+            width: 100%;
+
+            .restaurant {
+
+                &__inner {
+                    padding: 20px 30px 30px 0;
+                }
+                &__info {
+
+                    &-title {
+                        font-size: 28px;
+
+                        &:before {
+                            right: -30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:  $breakpoint-phone-medium) {
+    .interior-page {
+
+        &__restaurants {
+            margin-top: 20px;
+        }
+        &__restaurant {
+
+            .restaurant {
+                border-radius: 20px;
+
+                &__inner {
+                    padding: 20px 25px 25px 0;
+                }
+                &__icon {
+                    width: 25px;
+                    min-width: 25px;
+                }
+                &__info {
+
+                    &-title {
+                        font-size: 16px;
+
+                        &:before {
+                            right: -25px;
+                        }
+                    }
+                }
+            }
+            .institution-info {
+
+                &__block {
+                    border-radius: 15px;
+                    min-height: 350px;
+
+                    .details {
+                        left: 10px;
+                        top: 10px;
+                        right: auto;
+                        bottom: auto;
+                        padding: 10px;
+                        width: calc(100% - 20px);
+                        border-radius: 15px;
+
+                        &__top {
+                            margin-bottom: 10px;
+
+                            &-phone {
+                                font-size: 14px;
+
+                                span {
+                                    font-size: 18px;
+                                    margin-right: 10px;
+                                }
+                            }
+                            &-btn {
+                                height: 25px;
+                                padding: 0 10px;
+                                border-radius: 10px;
+                                font-size: 11px;
+                            }
+                        }
+                        &__address {
+                            font-size: 16px;
+                        }
+                        .schedule {
+                            margin-top: 10px;
+                        }
+                    }
+                    &-buttons {
+                        right: 10px;
+                        bottom: 35px;
+                    }
+                    &-btn {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 450px) {
+    .interior-page {
+
+        &__restaurant {
+
+            .restaurant {
+
+                &__inner {
+                    padding: 20px 20px 20px 0;
+                }
+                &__icon {
+                    width: 30px;
+                    min-width: 30px;
+                }
+                &__info {
+
+                    &-title {
+                        font-size: 16px;
+
+                        &:before {
+                            right: -20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

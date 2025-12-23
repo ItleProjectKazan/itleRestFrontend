@@ -1,0 +1,59 @@
+@import "styles/mixins";
+
+.contactsBody {
+    display: flex;
+    margin-top: 36px;
+
+    @include size-phone-large {
+        flex-wrap: wrap;
+        margin-top: 16px;
+    }
+}
+
+.contactsLeftBlock {
+    padding-right: 50px;
+    flex-grow: 1;
+
+    @include size-phone-large {
+        width: calc(100% + 20px);
+        padding: 0;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+}
+
+.contactsRightBlock {
+    width: 370px;
+    flex-shrink: 0;
+
+    @include size-phone-large {
+        padding-left: 0;
+        margin-top: 12px;
+        width: 100%;
+        margin-bottom: 90px;
+    }
+}
+
+.localitySelect {
+    z-index: 2;
+
+    :global(.toggle) {
+        font-size: 16px !important;
+    }
+}
+
+.title {
+    padding-top: 60px;
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: #362e28;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+
+    @include size-phone-large {
+        padding-top: 24px;
+        font-size: 22px;
+        line-height: 27px;
+    }
+}

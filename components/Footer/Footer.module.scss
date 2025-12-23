@@ -1,0 +1,360 @@
+@import 'styles/mixins';
+
+.footer {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 76px;
+
+    justify-content: center;
+}
+
+.sectionTop {
+    padding: 48px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--pink-light);
+    border-radius: 30px;
+
+    @include size-tablet {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
+
+.sectionTopSectionLeft {
+    display: flex;
+    flex-basis: 40%;
+    flex-direction: column;
+
+    @include size-tablet {
+        flex-basis: auto;
+    }
+}
+
+.sectionTopSectionRight {
+    display: flex;
+    flex-basis: 60%;
+    flex-direction: column;
+
+    @include size-tablet {
+        flex-basis: auto;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoContent {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 48px;
+
+    justify-content: space-between;
+
+    @include size-tablet {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.infoColumn {
+    display: flex;
+    flex-direction: column;
+    margin-right: 48px;
+    min-width: 100px;
+    width: max-content;
+    flex-wrap: nowrap;
+
+    @include size-tablet {
+        min-width: 60px;
+        margin-right: 20px;
+    }
+}
+
+.infoHeaderItem {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 48px;
+    font-family: var(--font-druk-wide-cy);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--dark);
+
+    @include size-tablet {
+        font-weight: 300;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+
+.infoContentItem > a {
+    font-family: var(--font-gotham);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--dark);
+
+    @include size-tablet {
+        font-size: 13px;
+    }
+}
+
+.infoContentItem:hover > a {
+    color: var(--grey-medium);
+}
+
+.socialIcons {
+    display: flex;
+    flex-direction: row;
+}
+
+.socialIconBlock {
+    min-width: 70px;
+    min-height: 68px;
+    display: flex;
+
+    padding-top: 8px;
+    padding-left: 25px;
+    margin-right: 20px;
+
+    background-image: url('~public/images/rhomb.png');
+
+    cursor: pointer;
+
+    @include size-tablet {
+        min-width: 35px;
+        width: 35px;
+        min-height: 34px;
+        height: 34px;
+        background-size: 35px 35px;
+        margin-right: 10px;
+        padding-left: 13px;
+
+        a {
+            svg {
+                zoom: 50%;
+            }
+
+            margin-top: -0.1px;
+        }
+    }
+}
+
+.socialIcon {
+    margin-top: 16px;
+}
+
+.places {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    flex-grow: 1;
+
+    @include size-tablet {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
+
+.place {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    @include size-tablet {
+        margin-top: 12px;
+    }
+}
+
+.placeLeft {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.placeRight {
+    display: flex;
+}
+
+.planeBtnBlock {
+    background: #fff;
+    border-radius: 14px;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    padding-left: 11px;
+    margin-left: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+
+    @include size-tablet {
+        font-size: 12px;
+    }
+}
+
+.placeSeeOnMap {
+    font-family: var(--font-gotham);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 120%;
+    color: var(--primary);
+
+    @include size-tablet {
+        font-size: 10px;
+    }
+}
+
+.placeLine > hr {
+    margin-left: 50px;
+    display: block;
+    background-color: var(--primary);
+    height: 1px;
+    border: 0;
+}
+
+.placeAddress {
+    font-family: var(--font-gotham);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--dark);
+
+    @include size-tablet {
+        font-size: 13px;
+    }
+}
+
+.placeWorkingTime {
+    font-family: var(--font-gotham);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: var(--grey-medium);
+
+    @include size-tablet {
+        font-size: 10px;
+    }
+}
+
+.sectionMiddle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 48px;
+    padding-bottom: 0;
+
+    @include size-tablet {
+        padding: 10px;
+        padding-bottom: 0;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+}
+
+.sectionMiddleItem {
+    margin-right: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+    @include size-tablet {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+.sectionMiddleBtnBlock {
+    cursor: pointer;
+    width: 69.88px;
+    height: 68px;
+    flex-shrink: 0;
+
+    @include size-tablet {
+        zoom: 50%;
+    }
+}
+
+.sectionMiddleText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.sectionMiddleHeader {
+    font-family: var(--font-druk-wide-cy);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    color: var(--dark);
+
+    @include size-tablet {
+        font-weight: 300;
+        font-size: 12px;
+    }
+}
+
+.sectionMiddleDescription {
+    font-family: var(--font-gotham);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: var(--dark-light);
+
+    @include size-tablet {
+        font-size: 10px;
+    }
+}
+
+.sectionBottom {
+    display: flex;
+    flex-direction: row;
+    padding: 48px;
+
+    a {
+        font-family: var(--font-gotham);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 120%;
+        color: var(--grey-medium);
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    @include size-tablet {
+        margin-top: 10px;
+        padding: 10px;
+        flex-direction: column;
+
+        a {
+            font-size: 10px;
+
+            svg {
+                zoom: 60%;
+            }
+        }
+    }
+}

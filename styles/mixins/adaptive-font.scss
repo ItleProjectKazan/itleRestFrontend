@@ -1,0 +1,17 @@
+// https://www.youtube.com/watch?v=HJZP5QsrpXs
+
+$containerWidth: 1140;
+$minScreenWidth: 320px;
+
+@mixin adaptive-font($desktopFontSize, $mobileFontSize) {
+    $additionalNumber: ($desktopFontSize - $mobileFontSize) * .6;
+    $addMobSize: $additionalNumber + $additionalNumber * .7;
+
+    @include size-phone-large {
+        font-size: calc( #{$mobileFontSize + px} + #{$addMobSize} * (( 100vw - #{$minScreenWidth}) / #{$containerWidth} ));
+    }
+
+    @include size-more-than-phone-large {
+        font-size: calc( #{$mobileFontSize + px} + #{$additionalNumber} * ( 100vw / #{$containerWidth} ));
+    }
+}

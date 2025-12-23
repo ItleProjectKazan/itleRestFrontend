@@ -1,0 +1,50 @@
+{
+    "customSyntax": "postcss-scss",
+    "rules": {
+        "block-closing-brace-newline-before": "always",
+        "block-opening-brace-newline-after": "always",
+        "block-opening-brace-space-before": "always",
+        "color-hex-case": "lower",
+        "color-hex-length": "short",
+        "color-named": "never",
+        "color-no-invalid-hex": true,
+        "comment-no-empty": true,
+        "comment-whitespace-inside": "always",
+        "declaration-block-single-line-max-declarations": 1,
+        "indentation": 4,
+        "length-zero-no-unit": true,
+        "no-eol-whitespace": true,
+        "number-leading-zero": "never",
+        "number-no-trailing-zeros": true,
+        "property-case": "lower",
+        "property-no-unknown": [
+            true,
+            {
+                "ignoreProperties": [
+                    "composes",
+                    "compose-with"
+                ]
+            }
+        ],
+        "selector-pseudo-class-no-unknown": [
+            true,
+            {
+                "ignorePseudoClasses": [
+                    "export",
+                    "import",
+                    "global",
+                    "local"
+                ]
+            }
+        ],
+        "rule-empty-line-before": "always",
+        "selector-list-comma-space-after": "always-single-line",
+        "selector-list-comma-space-before": "never",
+        "selector-pseudo-class-case": "lower",
+        "selector-pseudo-element-colon-notation": "double",
+        "selector-type-case": "lower",
+        "string-quotes": "double",
+        "unit-no-unknown": true,
+        "value-list-comma-space-after": "always-single-line"
+    }
+}

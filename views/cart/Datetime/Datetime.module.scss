@@ -1,0 +1,110 @@
+@import "styles/mixins";
+
+.header {
+    display: flex;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    flex-direction: row;
+    font-family: var(--font-druk-wide-cy);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin: 5px;
+}
+
+.selectHolder {
+    margin: 5px;
+}
+
+.deliveryFields {
+    margin: 0;
+    width: max(70%, 400px);
+
+    @include size-tablet {
+        width: max(100%, 400px);
+    }
+    :global(.form-grid) {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        gap: 0 15px;
+        grid-template-areas:
+            "wide wide"
+            ". .";
+    }
+    :global(.grid-wide) {
+        grid-area: wide;
+    }
+    :global(.select) {
+        width: 100%;
+    }
+    :global(.react-select__menu) {
+        top: calc(100% + 2px);
+        width: 100%;
+        padding: 5px;
+        border-radius: 14px;
+    }
+    :global(.react-select__control) {
+        max-width: none;
+        padding: 5px 10px;
+        border-radius: 14px;
+        border: none;
+    }
+    :global(.react-select__value-container) {
+        padding: 0;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    :global(.react-select__indicator),
+    :global(.react-select__dropdown-indicator),
+    :global(.indicatorContainer) {
+        padding: 0;
+    }
+    :global(.react-select__option) {
+        padding: 20px;
+
+        &:first-of-type {
+            border-top: none;
+        }
+        &:last-of-type {
+            border: none;
+        }
+    }
+    :global(.react-select__option--is-focused),
+    :global(.react-select__option--is-active),
+    :global(.react-select__option--is-selected) {
+        border-color: transparent;
+        border-radius: 14px;
+        //background-color: #0F0F0F;dark theme
+        background-color: #F1E9E7;
+    }
+    @include size-phone-large {
+        width: 100%;
+
+        :global(.form-grid) {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            gap: 0 10px;
+            grid-template-areas:
+                "wide wide"
+                ". .";
+        }
+        :global(.fs-22) {
+            font-size: 18px;
+        }
+    }
+    @include size-phone-medium {
+        width: 100%;
+
+        :global(.form-grid) {
+            grid-template-columns: 1fr 1fr;
+            gap: 0 0;
+            grid-template-areas:
+                "wide wide"
+                ". ."
+                ". .";
+        }
+    }
+}

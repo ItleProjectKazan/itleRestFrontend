@@ -1,0 +1,204 @@
+@import "styles/mixins";
+
+.card {
+    position: relative;
+    background: #fa7305;
+    border-radius: 40px;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: 40px;
+    overflow: hidden;
+
+    @include size-tablet {
+        padding: 20px;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+
+    @include size-tablet {
+        align-items: center;
+    }
+}
+
+.title {
+    align-self: start;
+    font-family: var(--font-druk-wide-cy);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--white);
+
+    width: 70%;
+
+    span {
+        color: var(--dark);
+    }
+
+    @include size-tablet {
+        font-size: 26px;
+    }
+
+}
+
+.formBlock {
+    margin-top: 42px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    @include size-tablet {
+        margin-top: 15px;
+    }
+}
+
+.orderButton {
+    margin-top: 42px;
+
+    width: 232px;
+    height: 76px;
+
+    background: var(--white);
+    color: var(--dark);
+    border-radius: 14px;
+
+    font-family: var(--font-gotham);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--dark);
+
+    &:disabled {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    @include size-tablet {
+        margin-top: 15px;
+    }
+}
+
+.bg2 {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    z-index: 98;
+
+    @include size-tablet {
+        display: none;
+    }
+
+}
+
+.bg1 {
+    position: absolute;
+    z-index: 99;
+    right: 95px;
+    bottom: 100px;
+
+    @include size-tablet {
+        display: none;
+    }
+}
+
+.agreementCheckbox {
+    margin-left: 30px;
+    width: 200px;
+
+    margin-top: 40px;
+
+    div,
+    a {
+        font-family: var(--font-gotham);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 120%;
+        color: var(--white);
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    @include size-tablet {
+        margin-top: 15px;
+    }
+}
+
+.input {
+    z-index: 0;
+    background: transparent;
+    height: 65px;
+    line-height: 65px;
+    border: 1px solid var(--primary-border);
+    width: 278px;
+
+    :global(.higherLabel) {
+        color: var(--white);
+    }
+
+    .higherLabel {
+        font-family: var(--font-gotham);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 120%;
+        color: var(--white);
+    }
+
+    input {
+        height: 100% !important;
+        margin: 0 !important;
+        color: var(--primary-text) !important;
+    }
+
+    @include size-tablet {
+        width: 100% !important;
+    }
+}
+
+
+.reserveBlock {
+    display: flex;
+    flex-direction: row;
+
+    @include size-tablet {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+.restSelect {
+    width: 278px;
+    height: 65px;
+    margin: 5px;
+    border-radius: 14px;
+    position: relative;
+
+    :global(.react-select__control) {
+        overflow: hidden;
+        border-radius: 14px;
+        height: 100%;
+        background: transparent;
+        border: 1px solid var(--primary-border);
+    }
+
+    @include size-tablet {
+        width: 100%;
+    }
+}

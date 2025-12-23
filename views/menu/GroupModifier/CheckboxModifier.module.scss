@@ -1,0 +1,22 @@
+@import 'styles/mixins';
+.title {
+    font-family: var(--font-gotham);
+    //color: #fff;dark theme
+    color: #232323;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-top: 15px;
+}
+
+.errored {
+    color: var(--primary);
+}
+
+.errorText {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    margin: 5px 0;
+    color: var(--primary);
+}

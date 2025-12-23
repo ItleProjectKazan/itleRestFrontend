@@ -1,0 +1,11 @@
+@import "styles/mixins";
+
+.container {
+    max-width: calc(100% - 32px * 2);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include size-phone-large {
+        max-width: calc(100% - 12px * 2);
+    }
+}

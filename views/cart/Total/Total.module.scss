@@ -1,0 +1,218 @@
+@import "styles/mixins";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+
+    @include size-phone-large {
+        width: 100%;
+        position: absolute;
+        bottom: 35px;
+        left: 25px;
+        margin-left: 0;
+    }
+    @include size-phone-medium {
+        left: 0;
+    }
+}
+.content {
+    display: flex;
+    flex-direction: column;
+
+    @include size-phone-large {
+        margin-bottom: 0;
+    }
+}
+.bonusText {
+    color: var(--primary);
+}
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include size-phone-large {
+        justify-content: space-between;
+    }
+}
+.totalText {
+    margin-right: 10px;
+    font-size: 20px;
+
+    @include size-phone-large {
+        font-size: 18px;
+    }
+    @include size-phone-large {
+        font-size: 16px;
+    }
+}
+.scrollBottomReached {
+
+    .totalText {
+        display: block;
+    }
+    &.root {
+        position: relative;
+        bottom: 0;
+        left: 0;
+    }
+    .discountText {
+        display: block;
+    }
+}
+.priceContainer {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    grid-column-gap: 0;
+}
+.priceContainerWithDiscount {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    grid-column-gap: 16px;
+}
+.subtotalPrice {
+    font-size: 22px;
+
+    @include size-phone-large {
+        font-size: 16px;
+    }
+}
+.totalPrice {
+    font-size: 32px;
+
+    @include size-phone-large {
+        font-size: 24px;
+    }
+}
+.discountPrice {
+    font-size: 32px;
+
+    @include size-phone-large {
+        font-size: 24px;
+    }
+}
+.scrollBottomReached .totalPrice {
+    font-size: 24px;
+}
+.discount {
+    color: #6a893e;
+}
+.bonusesText {
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    svg {
+        height: 18px;
+        width: 18px;
+        flex-shrink: 0;
+        fill: var(--primary);
+        margin-right: 6px;
+        margin-top: -1px;
+    }
+}
+.bonusesHow {
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 400;
+    text-align: right;
+}
+.header {
+    color: var(--brown-dark);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 22px;
+
+    @include size-tablet {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 13px;
+    }
+}
+.totalsSection {
+    padding: 0;
+    width: 100%;
+
+    .totalRow {
+        display: flex;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #232323;
+        font-family: var(--font-gotham);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 120%;
+        color: #606060;
+
+        .discountText {
+            color: #606060;
+        }
+        span:nth-of-type(1) {
+            text-align: left;
+            display: flex;
+            justify-content: flex-start;
+            flex-basis: 70%;
+        }
+        span:nth-of-type(2) {
+            text-align: left;
+            display: flex;
+            justify-content: flex-start;
+            flex-basis: 30%;
+        }
+        .infoIcon {
+            display: inline-flex;
+            margin-left: 10px;
+            color: var(--brown-100);
+            cursor: pointer;
+
+            &:hover {
+                color: var(--brown);
+            }
+            svg {
+                height: 22px;
+                width: 22px;
+            }
+        }
+        .infoIconOpen {
+            color: var(--brown);
+        }
+    }
+    .totalRow:nth-of-type(1) {
+        border-top: none;
+        padding-top: 20px;
+    }
+    .totalFinalRow {
+        display: flex;
+        font-family: var(--font-gotham);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        //color: #FFF;dark theme
+        color: #232323;
+
+        .discountedTotal {
+            //color: #FFF;dark theme
+            color: #232323;
+        }
+        span:nth-of-type(1) {
+            text-align: left;
+            display: flex;
+            justify-content: flex-start;
+            flex-basis: 70%;
+        }
+        span:nth-of-type(2) {
+            text-align: left;
+            display: flex;
+            justify-content: flex-start;
+            flex-basis: 30%;
+        }
+    }
+}

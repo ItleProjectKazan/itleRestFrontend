@@ -1,0 +1,118 @@
+@import "styles/mixins";
+
+.cardItemsList {
+    padding: 0;
+
+    @include size-tablet {
+        margin: 0;
+    }
+}
+.main {
+    margin-bottom: 100px;
+
+    @include size-phone-large {
+        margin-bottom: 0;
+        padding-bottom: 130px;
+    }
+}
+.closeIcon {
+    position: absolute;
+    right: 10px;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    background: var(--pink-light);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.minOrderSumTooltip {
+    max-width: 300px;
+    line-height: 20px;
+    font-size: 14px;
+}
+.orderButton {
+    flex-wrap: wrap;
+    height: 76px;
+    width: 100%;
+
+    @include size-phone-large {
+        margin-left: auto;
+    }
+    @include size-phone-medium {
+        height: 60px;
+        font-size: 15px;
+    }
+}
+.buttonBottom {
+    @include size-phone-large {
+        width: 100%;
+    }
+}
+.partialButtonText {
+    white-space: nowrap;
+}
+.footerBottom {
+    box-shadow: none;
+}
+.totalHeader {
+    font-family: var(--font-druk-wide-cy);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+.totalsSection {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 30px 0;
+
+    @include size-phone-large {
+        flex-wrap: wrap;
+
+        > div,
+        .totalsSectionItem {
+            width: 100%;
+        }
+    }
+}
+.content {
+    padding: 40px 40px 0 40px;
+
+    .cartTitle {
+        font-family: "Gotham";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: #4b4b4b;
+        margin-bottom: 8px;
+    }
+
+    @include size-phone-large {
+        padding: 40px 15px 110px 15px;
+    }
+}
+.recommendedHeader {
+    font-size: 17px;
+}
+.cartDelivery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    & > div {
+        width: calc(50% - 5px);
+        //background-color: #1E1E1E !important;dark theme
+        background-color: transparent;
+        //border-color: #1E1E1E !important;dark theme
+        border: 1px solid #B5A7A4 !important;
+    }
+}

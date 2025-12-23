@@ -1,0 +1,20 @@
+.label {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 4px 8px;
+    font-family: var(--font-gotham);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.discount {
+    background: var(--discount);
+    color: #fff;
+}
+
+.hit {
+    background: var(--dark);
+    color: #fff;
+}

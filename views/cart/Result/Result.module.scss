@@ -1,0 +1,36 @@
+@import "styles/mixins/adaptive";
+
+.root {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.text {
+    margin-bottom: 24px;
+    color: var(--brown-dark);
+    font-weight: bold;
+    text-align: center;
+}
+
+.icon {
+    width: 55px;
+    height: 65px;
+}
+
+.title {
+    margin-bottom: 8px;
+    font-size: 32px;
+
+    @include size-phone-medium {
+        font-size: 22px;
+    }
+}
+
+.subtitle {
+    font-size: 18px;
+
+    @include size-phone-medium {
+        font-size: 15px;
+    }
+}

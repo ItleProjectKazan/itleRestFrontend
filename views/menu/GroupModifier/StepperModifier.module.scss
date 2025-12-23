@@ -1,0 +1,72 @@
+@import "styles/mixins";
+
+.stepper {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    justify-self: flex-start;
+    align-items: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    @include adaptive-font(15, 14);
+    line-height: 19px;
+    color: var(--inactive-brown);
+    height: min-content;
+    padding: 3px;
+    clear: both;
+
+    @include size-phone-small {
+        max-width: 200px;
+    }
+}
+
+.stepperContained {
+    grid-template-rows: 1fr;
+}
+
+.stepperOutlined {
+    border: 1px solid var(--grey-light);
+    border-radius: 14px;
+    grid-template-rows: 1fr;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100%;
+}
+
+.option {
+    padding: 4px 12px;
+    border-radius: 4px;
+    color: #fff;
+    line-height: 19px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.optionNotSelected {
+    background: var(--pink-light);
+    border-radius: 11px;
+    color: var(--dark-light);
+    font-weight: 500;
+    font-size: var(--font-small);
+    line-height: 120%;
+}
+
+.optionSelected {
+    background: var(--white);
+    box-shadow: 0 6px 16px rgba(35, 35, 35, .13);
+    border-radius: 11px;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: var(--font-small);
+    line-height: 120%;
+}

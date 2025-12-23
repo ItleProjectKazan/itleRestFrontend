@@ -1,0 +1,24 @@
+.react-datepicker {
+    font-family: var(--font-gotham), Helvetica, sans-serif !important;
+    font-size: 0.9rem;
+
+    &__header {
+        //background-color: #151515 !important;dark theme
+        background-color: #D8CECB !important;
+    }
+    &__current-month {
+        //color: #FFF !important;dark theme
+        color: #232323 !important;
+    }
+    &__day-name {
+        //color: #FFF !important;dark theme
+        color: #232323 !important;
+    }
+    &__navigation-icon {
+
+        &:before {
+            //border-color: #FFF !important;dark theme
+            border-color: #232323 !important;
+        }
+    }
+}

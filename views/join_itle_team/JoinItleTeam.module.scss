@@ -1,0 +1,104 @@
+@import "styles/mixins";
+
+.introText {
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Gotham";
+    color: var(--dark-light);
+    font-weight: 400;
+    margin-bottom: 40px;
+
+    @include size-phone-large {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+.manBlock {
+    margin: 0 -20px;
+    border-radius: 40px;
+    border: solid 1px var(--primary);
+    padding: 40px;
+    position: relative;
+
+    .firstRow {
+        display: flex;
+        font-family: "Gotham";
+        align-items: center;
+        margin-bottom: 40px;
+
+        svg {
+            height: 66px;
+            margin-left: 15px;
+        }
+
+        .textBlock {
+            color: var(--dark);
+            font-weight: 500;
+
+            span {
+                text-decoration: underline;
+            }
+        }
+
+        @include size-tablet {
+            flex-direction: column;
+            flex-direction: column;
+            align-items: flex-start;
+
+            svg {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .secondRow {
+        display: flex;
+        font-family: "Gotham";
+        align-items: center;
+
+        .textBlock {
+            color: var(--dark);
+            font-weight: 200;
+
+            span {
+                text-decoration: underline;
+            }
+        }
+
+        .links {
+
+            a {
+                height: 66px;
+                width: 66px;
+                border-radius: 14px;
+                background: var(--pink-light);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 15px;
+
+                svg {
+                    width: 20px;
+                }
+            }
+        }
+    }
+
+    .manImage {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include size-tablet {
+            position: static;
+        }
+    }
+
+    @include size-tablet {
+        flex-direction: column;
+        margin: 0;
+        padding-bottom: 0;
+    }
+}

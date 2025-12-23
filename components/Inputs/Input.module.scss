@@ -1,0 +1,168 @@
+@import "styles/mixins";
+
+.input {
+    //background: #0F0F0F;dark theme
+    background: #FFF;
+    //border: 1px solid #292929;dark theme
+    border: 1px solid #E8DDDB;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    padding: 11px 15px 11px 15px;
+    align-items: center;
+    transition: .3s linear all;
+
+    &:hover,
+    &:focus {
+        border-color: #B6ABA9;
+    }
+}
+
+.inputTransparent {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid var(--primary-border);
+}
+
+.small {
+    width: 138px;
+}
+
+.smaller {
+    width: 85px;
+}
+
+.medium {
+    width: 278px;
+}
+
+.big {
+    width: calc(50% - 5px - 5px);
+
+    @include size-tablet {
+        width: 100%;
+    }
+}
+
+.bigger {
+    width: 100%;
+}
+
+.inputBlock {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.inputLabel {
+    font-family: var(--font-gotham);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    //color: var(--grey-medium);dark theme
+    color: #232323;
+}
+
+.inputLabelTransparent {
+    //background-color: #0F0F0F;dark theme
+    background-color: #FFF;
+    //color: #606060;dark theme
+    color: #232323;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+}
+
+.htmlInput {
+    width: 100%;
+    height: 22px;
+    margin-top: 6px;
+    //background: #0F0F0F;dark theme
+    background: #FFF;
+    border: none;
+    outline: none;
+    font-family: var(--font-gotham);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    //color: #FFF;dark theme
+    color: #232323;
+}
+
+.htmlInputTransparent {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--primary-text);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.input input[type="date"] {
+    position: relative;
+    color: rgba(255, 255, 255, 0);
+}
+
+.input input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+}
+
+.input input[type=date]::-webkit-datetime-edit-text {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.input input[type=date]::-webkit-datetime-edit-month-field {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.input input[type=date]::-webkit-datetime-edit-day-field {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.input input[type=date]::-webkit-datetime-edit-year-field {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.htmlInputText {
+    position: absolute;
+    margin-top: 22px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--primary-text);
+    pointer-events: none;
+}
+
+.button {
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    height: 30px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-gotham);
+    font-weight: 500;
+    font-size: 12px;
+    //color: #FFF;dark theme
+    color: #232323;
+    cursor: pointer;
+}
+
+.icon {
+    margin-right: 15px;
+    vertical-align: middle;
+}

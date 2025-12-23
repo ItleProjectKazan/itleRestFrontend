@@ -1,0 +1,39 @@
+.select {
+    display: inline-flex;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    color: var(--white);
+
+    &:after {
+        font-family: 'itle' !important;
+        content: "\e90b";
+        margin-left: 8px;
+        margin-top: 4px;
+        font-size: 14px;
+        color: var(--primary);
+    }
+}
+
+.popover {
+    display: grid;
+    row-gap: 12px;
+    column-gap: 86px;
+    padding: 20px 32px;
+}
+
+.locality {
+    font-weight: 50;
+    cursor: pointer;
+}
+
+.localitySelected {
+    color: var(--primary);
+    font-weight: 700;
+}

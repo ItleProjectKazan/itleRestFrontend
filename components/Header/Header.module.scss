@@ -1,0 +1,445 @@
+@import "styles/mixins";
+
+.header {
+    padding-top: 40px;
+    padding-bottom: 32px;
+    background-color: var(--pink-light);
+
+    @include size-tablet {
+        padding: 0;
+        background-color: #fff;
+    }
+}
+
+.sheduleInfoModal {
+
+    .sheduleInfoModalContainer {
+        margin: 0 40px 0 40px;
+        line-height: 1.8;
+
+        .modalHeader {
+            color: var(--primary);
+            margin-top: 20px;
+
+            // font-family: var(--font-druk-wide-cy);
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 130%;
+
+            @include size-tablet {
+                font-size: 14px;
+            }
+        }
+
+        .modalInfo {
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 130%;
+            max-width: 270px;
+            //color: #FFF;dark theme
+            color: #232323;
+            margin-right: 100px;
+            margin-top: 10px;
+
+            @include size-tablet {
+                font-size: 14px;
+            }
+            @include size-phone-medium {
+                max-width: 100%;
+            }
+        }
+
+        .modalButton {
+            margin-top: 40px;
+            height: 70px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+    align-items: center;
+
+    @include size-laptop {
+        padding: 0 15px;
+    }
+
+    @include size-tablet {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 15px;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, .1);
+        grid-template-columns: 1fr auto;
+        position: relative;
+        padding-bottom: 65px;
+    }
+}
+
+.floatingCart {
+    display: none;
+
+    @include size-tablet {
+        //display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        z-index: var(--z-index-cart-icon);
+        width: 55px;
+        height: 55px;
+        padding: 10px;
+        background-color: var(--primary);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+        border-radius: 50%;
+    }
+}
+
+.headerStart {
+    display: flex;
+}
+
+.logoHolder {
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.logoHolderMain {
+    margin: -10px 0;
+
+    h1 {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        margin: 0;
+        color: var(--brown);
+        margin-top: 5px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    @include size-tablet {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+
+        h1 {
+            font-size: 11px;
+            line-height: 14px;
+            margin-left: 13px;
+            width: 85px;
+        }
+    }
+}
+
+.contentCart {
+    grid-template-columns: auto 1fr;
+    padding-bottom: 15px;
+}
+
+.headerMobile {
+    margin: 0;
+}
+
+.contentEnd {
+    display: flex;
+    justify-self: end;
+}
+
+.profileHolder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-radius: 14px;
+    margin-left: 20px;
+    margin-top: 12px;
+    flex-shrink: 0;
+    background: var(--white);
+    height: 40px;
+    min-width: 40px;
+
+    @include size-laptop {
+        margin-right: 20px;
+    }
+
+    @include size-tablet {
+        display: none;
+    }
+
+    .profileContent {
+        display: flex;
+        flex-direction: column;
+        padding-right: 5px;
+    }
+
+    .logOutDrop {
+        display: flex;
+        margin-left: 12px;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--brown-dark);
+        }
+    }
+}
+
+.profileIcon {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.leftPesudo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    height: 60px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.rightPesudo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    height: 60px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profileLabel {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    color: var(--brown-dark);
+    font-weight: bold;
+    cursor: pointer;
+
+    @include size-tablet {
+        display: none;
+    }
+}
+
+.logoutIcon {
+    margin-left: 5px;
+    color: var(--secondary);
+    cursor: pointer;
+
+    @include size-tablet {
+        display: none;
+    }
+}
+
+.bonusesCount {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+
+    @include size-tablet {
+        display: none;
+    }
+}
+
+.cartButton {
+    white-space: nowrap;
+    height: 40px;
+    width: 132px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    padding: 0 !important;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
+    border-radius: 14px;
+    cursor: pointer;
+
+    .svg {
+        color: var(--white);
+    }
+
+    @include size-tablet {
+        min-width: 60px;
+        width: 60px;
+    }
+}
+
+.cartButtonLabel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include size-tablet {
+        display: none;
+    }
+}
+
+.backArrow {
+    display: none;
+
+    @include size-tablet {
+        margin-right: 15px;
+        display: block;
+        vertical-align: super;
+    }
+}
+
+.burger {
+    display: none;
+
+    @include size-tablet {
+        margin-top: 5px;
+        grid-column-start: -1;
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+    }
+}
+
+.burgerLine {
+    background-color: var(--burger-color);
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+
+    & + & {
+        margin-top: 5px;
+    }
+}
+
+.angleDownHolder {
+    line-height: 1px !important;
+    cursor: pointer;
+}
+
+.angleDown {
+    width: 11px !important;
+    height: 6px !important;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.phoneHolder {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-radius: 6px;
+    padding: 20px;
+    margin: -20px 0;
+    position: relative;
+    flex-shrink: 0;
+
+    @include size-laptop {
+        margin-right: 20px;
+    }
+
+    @include size-tablet {
+        display: none;
+    }
+
+    .phoneDrop {
+        display: none;
+    }
+}
+
+.phoneLine {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+
+    svg {
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+        margin-right: 5px;
+    }
+
+    a {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--brown-dark);
+    }
+}
+
+.contact {
+    font-weight: bold;
+    font-size: var(--font-large);
+    line-height: 20px;
+}
+
+.closingTime {
+    color: var(--grey-medium);
+    font-weight: normal;
+    font-size: var(--font-small);
+    line-height: 14.4px;
+    text-align: right;
+}
+
+.reserveButton {
+    white-space: nowrap;
+    height: 40px;
+    width: 157px !important;
+    margin-top: 12px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 0 !important;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0) !important;
+    color: var(--dark) !important;
+    border: 1px solid var(--primary);
+    border-radius: 14px;
+
+    @include size-tablet {
+        display: none;
+    }
+}
+
+.mobileContacts {
+    display: none;
+
+    @include size-tablet {
+        display: block;
+        cursor: pointer;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+        }
+    }
+}

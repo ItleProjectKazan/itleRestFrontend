@@ -1,0 +1,32 @@
+.muted {
+    color: var(--text-on-dark-passive) !important;
+}
+.text-content {
+
+    a, a:visited {
+        color: var(--primary-text);
+        text-decoration: none;
+    }
+    a:hover {
+        color: var(--dark);
+        text-decoration: none;
+    }
+    ul.list {
+
+        li {
+            list-style: disc;
+            padding-left: .5rem;
+
+            &:not(:first-child) {
+                margin-top: .9rem;
+            }
+            &:not(:last-child) {
+                margin-bottom: .9rem;
+            }
+        }
+        &::marker {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import "styles/mixins";
+
+.sheduleInfoModal {
+
+    .sheduleInfoModalContainer {
+        margin: 0 40px 0 40px;
+        line-height: 1.8;
+    }
+}
+
+.top {
+    padding-bottom: 60px;
+    background-color: var(--pink-light);
+
+    @include size-phone-large() {
+        padding-top: 20px;
+        padding-bottom: 26px;
+    }
+}
+
+.productsSlider {
+    margin-top: 66px;
+
+    @include size-tablet {
+        margin-top: 32px;
+    }
+}
+
+.smallBanners {
+    display: flex;
+    flex-direction: row;
+    max-width: var(--container-width);
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+
+    @include size-tablet {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+}

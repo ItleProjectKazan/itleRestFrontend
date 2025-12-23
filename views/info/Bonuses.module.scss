@@ -1,0 +1,312 @@
+@import "styles/mixins";
+
+.headerRow {
+    position: relative;
+    padding: 20px 0;
+    padding-bottom: 40px;
+    background: radial-gradient(50% 50% at 50% 50%, #cb4746 0%, #a3342b 100%);
+
+    @include size-laptop {
+        padding: 0 12px;
+        padding-bottom: 50px;
+    }
+
+    @include size-phone-small {
+        padding-bottom: 30px;
+    }
+
+    .headerHolder {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        position: relative;
+
+        @include size-tablet {
+            flex-direction: column;
+        }
+
+        .textHolder {
+            width: 660px;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+
+            @include size-tablet {
+                width: 100%;
+                position: static;
+            }
+
+            .mainText {
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 63px;
+                color: #fff;
+                margin-bottom: 32px;
+
+                @include size-tablet {
+                    text-align: center;
+                    font-size: 24px;
+                    line-height: 30px;
+                    margin-bottom: 8px;
+                }
+            }
+
+            .subText {
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 35px;
+                color: #fff;
+
+                @include size-tablet {
+                    text-align: center;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .dishHolder {
+            position: relative;
+            width: 70%;
+            z-index: 0;
+
+            @include size-tablet {
+                width: 100%;
+                z-index: 0;
+                margin-left: -13%;
+            }
+        }
+
+        .coinHolder {
+            position: absolute;
+            width: 150px;
+            left: -120px;
+            bottom: -45px;
+
+            @include size-laptop {
+                display: none;
+            }
+        }
+    }
+}
+
+.logoList {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 20px;
+    display: -moz-box;
+    display: flex;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    width: 920px;
+    margin: 0 auto;
+    margin-top: -72px;
+    margin-bottom: -72px;
+    z-index: 2;
+    position: relative;
+
+    @include size-tablet {
+        width: calc(100% - 24px);
+        padding: 20px 10px;
+        margin-top: -60px;
+        margin-bottom: -60px;
+    }
+
+    @include size-phone-large {
+        margin-top: -45px;
+        margin-bottom: -60px;
+    }
+
+    .logoHolder {
+        margin: 0 37px;
+        flex: 1;
+
+        @include size-tablet {
+            margin: 0 10px;
+        }
+    }
+}
+
+.mainContent {
+    background: var(--pink);
+    padding-top: 150px;
+
+    @include size-phone-large {
+        padding-top: 60px;
+    }
+
+    .benefitRow {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        flex-direction: row;
+
+        &:nth-of-type(even) {
+            flex-direction: row-reverse;
+        }
+
+        @include size-phone-large {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+
+            &:nth-of-type(even) {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .benefitText {
+            width: 50%;
+            position: relative;
+
+            @include size-phone-large {
+                width: 100%;
+            }
+
+            .benefitHeading {
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 50px;
+                color: #000;
+                margin-bottom: 25px;
+
+                @include size-phone-large {
+                    text-align: center;
+                    font-size: 22px;
+                    line-height: 28px;
+                    margin-bottom: 8px;
+                }
+            }
+
+            .benefitSub {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 30px;
+                color: #000;
+
+                @include size-phone-large {
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 23px;
+                }
+            }
+
+            .benefitSubRed {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 30px;
+                color: var(--primary);
+
+                @include size-phone-large {
+                    text-align: center;
+                    font-size: 20px;
+                    line-height: 25px;
+                }
+            }
+        }
+
+        .benefitImage {
+            width: 40%;
+            position: relative;
+
+            @include size-phone-large {
+                width: 80%;
+                margin: 40px auto;
+            }
+
+            @include size-phone-small {
+                width: 60%;
+            }
+        }
+    }
+}
+
+.arrowRight {
+    position: absolute;
+    left: calc(-130px - 30%);
+    bottom: -51px;
+    width: 130px;
+
+    @include size-phone-large {
+        display: none;
+    }
+}
+
+.arrowLeft {
+    position: absolute;
+    right: -105px;
+    bottom: -37px;
+    width: 105px;
+
+    @include size-phone-large {
+        display: none;
+    }
+}
+
+.afterAttention {
+    background: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 757px;
+    margin: 35px auto;
+
+    @include size-tablet {
+        width: calc(100% - 24px);
+    }
+
+    .imgHolder {
+        width: 56px;
+
+        @include size-tablet {
+            width: 37px;
+        }
+    }
+
+    span {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 35px;
+        display: inline-block;
+        margin-left: 32px;
+
+        @include size-tablet {
+            font-size: 16px;
+            line-height: 20px;
+            margin-left: 20px;
+        }
+    }
+}
+
+.finalText {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+    color: #000;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    width: 1000px;
+    max-width: 100%;
+
+    @include size-tablet {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 0 12px;
+        margin-bottom: 30px;
+    }
+}
+
+.toMenuButtonHolder {
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toMenuButton {
+    flex-shrink: 0;
+}

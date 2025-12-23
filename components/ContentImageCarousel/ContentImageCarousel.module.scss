@@ -1,0 +1,168 @@
+@import "styles/mixins";
+
+.carousel {
+    position: relative;
+
+    @include size-phone-large {
+        display: block;
+    }
+}
+
+.backgroundImage {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        border-radius: 8px;
+    }
+
+    @include size-phone-large {
+        height: 400px;
+    }
+}
+
+.slide {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.slideContent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-size: cover;
+    height: 100%;
+
+    div:nth-of-type(1) {
+        width: 30%;
+        margin-right: 16px;
+    }
+
+    @include size-phone-medium {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.slide_is_loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-size: cover;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @include size-phone-medium {
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 500px;
+    }
+}
+
+.image {
+    position: relative;
+    height: 80%;
+}
+
+.pagination {
+    position: static;
+    margin-top: 10px;
+
+    & :global(.swiper-pagination-bullet) {
+        background-color: var(--brown);
+        width: 6px;
+        height: 6px;
+        vertical-align: middle;
+    }
+
+    & :global(.swiper-pagination-bullet-active) {
+        background-color: var(--primary);
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.title {
+    font-weight: 900;
+    line-height: 1.5;
+    color: var(--white);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+    margin: 0;
+    text-align: right;
+
+    @include adaptive-font(48, 16);
+
+    font-family: var(--font-appetite);
+
+    mark {
+        color: #ffe057;
+        background-color: transparent;
+    }
+
+    @include size-phone-medium {
+        line-height: 1.2;
+        font-family: var(--font-appetite);
+    }
+}
+
+.invicible_image {
+    opacity: 0;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: calc((100% - var(--container-width))/2);
+
+    max-width: var(--container-width);
+    width: var(--container-width);
+    margin: 0 auto;
+
+    @include size-phone-large {
+        display: none;
+    }
+
+    .swiperButtonNext,
+    .swiperButtonPrev {
+        position: absolute;
+        margin-top: 20px;
+        cursor: pointer !important;
+        width: 40px;
+        height: 40px;
+        background: var(--white);
+        border-radius: 14px;
+        padding-left: 10px;
+        padding-top: 9px;
+        z-index: 40;
+
+        @include size-big-laptop {
+            display: none;
+        }
+    }
+
+    .swiperButtonNext {
+        right: 0;
+    }
+
+    .swiperButtonPrev {
+        left: 0;
+    }
+}

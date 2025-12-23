@@ -1,0 +1,59 @@
+@import "styles/mixins";
+
+.slider {
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.products {
+    display: flex;
+    align-items:  center;
+    height: 100%;
+    // horizontal padding for slides shadow
+    padding: 0 14px;
+    max-width: 1140px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: #362e28;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+
+    @include size-phone-large {
+        font-size: 22px;
+    }
+}
+
+.swiperContainer {
+    width: 100%;
+    max-width: 1140px;
+    // vertical padding for slides shadow
+    padding: 14px 0;
+    overflow: visible;
+
+    --slide-count: 4;
+    --slide-gap-count: calc(var(--slide-count) - 1);
+    --slide-gap: 30px;
+    --total-slides-width: calc(var(--container-width) - var(--slide-gap) * var(--slide-gap-count));
+
+    & :global(.swiper-slide) {
+        // 28px - horizontal padding for slides shadow
+        width: calc((var(--total-slides-width) - 60px) / var(--slide-count));
+        height: 128px;
+        opacity: .25;
+    }
+
+    & :global(.swiper-slide-visible) {
+        opacity: 1;
+    }
+}

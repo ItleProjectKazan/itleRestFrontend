@@ -1,0 +1,22 @@
+.breadcrumbs {
+    font-size: 12px;
+    line-height: 120%;
+    color: #424242;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-transform: lowercase;
+
+    a {
+        color: #424242;
+        transition: .3s linear all;
+
+        &:hover {
+            color: var(--primary);
+        }
+    }
+
+    svg {
+        margin: 0 5px;
+    }
+}

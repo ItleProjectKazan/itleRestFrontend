@@ -1,0 +1,33 @@
+@import "styles/mixins";
+
+.firstRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    .leftBlock {
+        width: calc(60% - 20px);
+
+        @include size-phone-large {
+            width: 100%;
+        }
+    }
+
+    .imageBlock {
+        width: calc(40% - 20px);
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+
+        @include size-phone-large {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include size-phone-large {
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+}

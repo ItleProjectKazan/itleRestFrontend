@@ -1,0 +1,34 @@
+@import "styles/mixins";
+
+.select {
+    display: flex;
+}
+
+.option {
+    font-family: var(--font-druk-wide-cy);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    text-transform: uppercase;
+    //color: var(--primary-text);dark theme
+    color: #948986;
+    margin-right: 15px;
+    cursor: pointer;
+
+    &:last-child {
+        margin-right: 0;
+    }
+    @include size-tablet {
+        font-size: 14px;
+    }
+}
+
+.optionSelected {
+    //color: var(--white);dark theme
+    color: #232323;
+}
+
+.discountLabel {
+    margin-left: 12px;
+}

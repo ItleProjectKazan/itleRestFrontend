@@ -1,0 +1,26 @@
+@import "styles/mixins";
+
+.loader {
+    display: flex;
+    max-height: 1000px;
+    justify-content: center;
+    align-items: center;
+}
+
+.map {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 180px;
+    height: 1004px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include size-phone-large {
+        height: 375px;
+        border-radius: 0;
+        overflow: auto;
+        margin-bottom: 0;
+    }
+}
