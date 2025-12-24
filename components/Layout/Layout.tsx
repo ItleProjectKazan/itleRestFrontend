@@ -107,7 +107,9 @@ const Layout: FC<Props> = observer(({ classes, children, description, orderStep,
                 <link href='/manifest.json' rel='manifest' />
                 <link href='/manifest.json' rel='manifest' />
             </Head>
-            <AppBanner />
+            <div style={{ position: 'relative', zIndex: 9999 }}>
+                <AppBanner />
+            </div>
             <Preloader />
             {/* <GoogleTagManager /> */}
             <Toastify />

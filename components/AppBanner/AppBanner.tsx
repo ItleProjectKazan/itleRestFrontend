@@ -55,15 +55,21 @@ export const AppBanner: FC = () => {
                         </div>
                         <div className={styles.textBlock}>
                             <div className={styles.title}>
-                                СКАЧИВАЙТЕ ПРИЛОЖЕНИЕ <span className={styles.titleRed}>ITLE</span>
+                                СКАЧИВАЙТЕ{isMobile && <br />} ПРИЛОЖЕНИЕ <span className={styles.titleRed}>ITLE</span>
                             </div>
                             <div className={styles.subtitle} suppressHydrationWarning>
-                                {isMobile
-                                    ? 'Индивидуальные акции, скидки и промокоды в приложении.'
-                                    : 'Ещё больше индивидуальных акций, скидок и промокодов в нашем приложении.'
-                                }
+                              {isMobile
+                                ? ''
+                                : 'Ещё больше индивидуальных акций, скидок и промокодов в нашем приложении.'
+                              }
                             </div>
                         </div>
+                      <div className={styles.subtitle} suppressHydrationWarning>
+                        {isMobile
+                          ? 'Индивидуальные акции, скидки и промокоды в приложении.'
+                          : ''
+                        }
+                      </div>
                         <button className={styles.button} onClick={handleClick}>
                             Скачать приложение ITLE
                         </button>

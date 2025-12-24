@@ -1,22 +1,16 @@
 @import 'styles/mixins';
 
 .bannerWrapper {
-    background: white;
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 122;
+    padding: 5px 0;
+    background: #CBC2C0;
 
     @include size-tablet {
-        padding: 16px 0;
-        border-bottom: none;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        border-radius: 0 0 16px 16px;
-        position: fixed;
-        z-index: 122;
+        padding: 0;
     }
 }
 
@@ -25,12 +19,19 @@
     align-items: center;
     gap: 16px;
     position: relative;
-    padding-right: 30px;
+    padding: 5px 60px 5px 8px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 
     @include size-tablet {
-        flex-direction: column;
-        gap: 12px;
-        padding: 0 16px;
+        margin-top: 5px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 12px;
+        border-radius: 22px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -41,9 +42,7 @@
     flex-shrink: 0;
 
     @include size-tablet {
-        position: absolute;
-        left: 16px;
-        top: 0;
+        position: static;
     }
 }
 
@@ -52,9 +51,9 @@
     height: 44px;
 
     @include size-tablet {
-        width: 56px;
-        height: 56px;
-        border-radius: 12px;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
     }
 }
 
@@ -65,11 +64,12 @@
     gap: 2px;
 
     @include size-tablet {
-        width: 100%;
-        padding-left: 72px;
-        padding-right: 24px;
+        flex: 1;
+        min-width: 0;
+        padding-left: 0;
+        padding-right: 0;
         text-align: left;
-        gap: 8px;
+        gap: 2px;
     }
 }
 
@@ -82,9 +82,9 @@
     color: #000;
 
     @include size-tablet {
-        font-size: 16px;
+        font-size: 13px;
         line-height: 1.2;
-        margin-top: 10px;
+        margin-top: 0;
     }
 }
 
@@ -99,9 +99,11 @@
     color: #888;
 
     @include size-tablet {
-        font-size: 14px;
-        font-style: italic;
+        font-size: 10px;
+        font-style: normal;
+        padding-left: 15px;
         color: #666;
+        width: 100%;
     }
 }
 
@@ -128,9 +130,9 @@
 
     @include size-tablet {
         width: 100%;
-        padding: 16px 24px;
-        font-size: 16px;
-        border-radius: 12px;
+        padding: 10px 16px;
+        font-size: 13px;
+        border-radius: 22px;
         margin-top: 4px;
     }
 }
@@ -143,7 +145,7 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 4px;
+    padding: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,14 +165,14 @@
     }
 
     @include size-tablet {
-        right: 16px;
-        top: 0;
+        right: 8px;
+        top: 8px;
         transform: none;
         padding: 4px;
 
         svg {
-            width: 24px;
-            height: 24px;
+            width: 18px;
+            height: 18px;
         }
     }
 }

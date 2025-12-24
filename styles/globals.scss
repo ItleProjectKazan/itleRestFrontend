@@ -293,15 +293,23 @@ body {
 @import "pages/order-status";
 
 :root {
-    --app-banner-height: 64px;
+    --app-banner-height: 60px;
 }
 
-body.app-banner-visible .header {
-    top: var(--app-banner-height);
+body.app-banner-visible {
+    padding-top: calc(100px + var(--app-banner-height) + 20px) !important;
+
+    .header {
+        top: var(--app-banner-height);
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-tablet) {
     :root {
-        --app-banner-height: 140px;
+        --app-banner-height: 135px;
+    }
+
+    body.app-banner-visible {
+        padding-top: calc(60px + var(--app-banner-height) + 20px) !important;
     }
 }
