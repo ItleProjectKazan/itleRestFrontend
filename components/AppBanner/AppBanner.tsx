@@ -48,7 +48,7 @@ export const AppBanner: FC = () => {
     return (
         <>
             <div className={styles.bannerWrapper}>
-                <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 15px' }}>
+                <div className="container" style={{ maxWidth: '1300px', margin: '0 auto', padding: '0 15px' }}>
                     <div className={styles.banner}>
                         <div className={styles.logoBox}>
                             <img src="/images/app-logo.png" alt="ITLE" className={styles.logo} />
