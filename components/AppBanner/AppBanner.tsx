@@ -55,7 +55,7 @@ export const AppBanner: FC = () => {
                         </div>
                         <div className={styles.textBlock}>
                             <div className={styles.title}>
-                                СКАЧИВАЙТЕ ПРИЛОЖЕНИЕ <span className={styles.titleOrange}>ITLE</span>
+                                СКАЧИВАЙТЕ ПРИЛОЖЕНИЕ <span className={styles.titleRed}>ITLE</span>
                             </div>
                             <div className={styles.subtitle} suppressHydrationWarning>
                                 {isMobile
