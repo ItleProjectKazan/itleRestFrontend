@@ -1,6 +1,6 @@
 export const AppLinks = {
-    ios: 'https://apps.apple.com/ru/app/your-app-id',
-    android: 'https://play.google.com/store/apps/details?id=your.app.id',
+    ios: 'https://apps.apple.com/us/app/%D0%B8%D1%82%D0%BB%D0%B5-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%B5%D0%B4%D1%8B/id6744911795',
+    android: 'https://play.google.com/store/apps/details?id=cc.sellkit.itle',
     qrCodeImage: '/images/app-qr-code.png',
 }
 
