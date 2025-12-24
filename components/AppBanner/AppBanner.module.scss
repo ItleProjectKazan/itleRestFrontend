@@ -1,0 +1,177 @@
+@import 'styles/mixins';
+
+.bannerWrapper {
+    background: white;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 122;
+
+    @include size-tablet {
+        padding: 16px 0;
+        border-bottom: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        border-radius: 0 0 16px 16px;
+        position: fixed;
+        z-index: 122;
+    }
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    padding-right: 30px;
+
+    @include size-tablet {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 16px;
+    }
+}
+
+.logoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    @include size-tablet {
+        position: absolute;
+        left: 16px;
+        top: 0;
+    }
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+
+    @include size-tablet {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+    }
+}
+
+.textBlock {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    @include size-tablet {
+        width: 100%;
+        padding-left: 72px;
+        padding-right: 24px;
+        text-align: left;
+        gap: 8px;
+    }
+}
+
+.title {
+    font-family: var(--font-druk-wide-cy);
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: #000;
+
+    @include size-tablet {
+        font-size: 16px;
+        line-height: 1.2;
+        margin-top: 10px;
+    }
+}
+
+.titleOrange {
+    color: #FF6A00;
+}
+
+.subtitle {
+    font-size: 12px;
+    line-height: 1.3;
+    font-weight: 400;
+    color: #888;
+
+    @include size-tablet {
+        font-size: 14px;
+        font-style: italic;
+        color: #666;
+    }
+}
+
+.button {
+    background: #FF6A00;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+
+    &:hover {
+        background: #FF7A10;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    @include size-tablet {
+        width: 100%;
+        padding: 16px 24px;
+        font-size: 16px;
+        border-radius: 12px;
+        margin-top: 4px;
+    }
+}
+
+.closeButton {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+
+        path {
+            stroke: #000;
+        }
+    }
+
+    @include size-tablet {
+        right: 16px;
+        top: 0;
+        transform: none;
+        padding: 4px;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+

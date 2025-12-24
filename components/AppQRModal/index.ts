@@ -1,0 +1,1 @@
+export { AppQRModal } from './AppQRModal'

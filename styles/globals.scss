@@ -291,3 +291,17 @@ body {
 @import "pages/contacts-page";
 @import "pages/vacancy-page";
 @import "pages/order-status";
+
+:root {
+    --app-banner-height: 64px;
+}
+
+body.app-banner-visible .header {
+    top: var(--app-banner-height);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --app-banner-height: 140px;
+    }
+}

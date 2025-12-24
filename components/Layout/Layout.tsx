@@ -19,6 +19,7 @@ import {
     SuccessfullReserveModal,
     PromocodeModal,
     Toastify,
+    AppBanner,
 } from '~/components'
 import { Footer } from '~/components/Footer/Footer'
 import { Header } from '~/components/Header/Header'
@@ -106,6 +107,7 @@ const Layout: FC<Props> = observer(({ classes, children, description, orderStep,
                 <link href='/manifest.json' rel='manifest' />
                 <link href='/manifest.json' rel='manifest' />
             </Head>
+            <AppBanner />
             <Preloader />
             {/* <GoogleTagManager /> */}
             <Toastify />
