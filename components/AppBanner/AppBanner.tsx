@@ -4,8 +4,10 @@ import { AppQRModal } from '~/components/AppQRModal'
 import styles from './AppBanner.module.scss'
 import CloseIcon from '~/public/images/close-icon.svg'
 
+const BANNER_CLOSED_KEY = 'appBannerClosed'
+
 export const AppBanner: FC = () => {
-    const [isVisible, setIsVisible] = useState(true)
+    const [isVisible, setIsVisible] = useState(false)
     const [qrModalOpen, setQrModalOpen] = useState(false)
     const [isMobile, setIsMobile] = useState(false)
 
@@ -16,6 +18,13 @@ export const AppBanner: FC = () => {
         checkMobile()
         window.addEventListener('resize', checkMobile)
         return () => window.removeEventListener('resize', checkMobile)
+    }, [])
+
+    useEffect(() => {
+        const wasClosed = localStorage.getItem(BANNER_CLOSED_KEY)
+        if (!wasClosed) {
+            setIsVisible(true)
+        }
     }, [])
 
     useEffect(() => {
@@ -43,6 +52,7 @@ export const AppBanner: FC = () => {
 
     const handleClose = () => {
         setIsVisible(false)
+        localStorage.setItem(BANNER_CLOSED_KEY, 'true')
     }
 
     return (

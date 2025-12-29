@@ -29,7 +29,7 @@ const Home: NextPage<IHome> = observer(({ banners, recommendedProducts, seoTitle
     const mobileBanners = useMemo(() => banners.filter((banner) => banner.type === TBannerType.MOBILE), [banners])
 
     return (
-        <Layout title={title} description={description} recommendedProducts={recommendedProducts}>
+        <Layout title={title} description={description} recommendedProducts={recommendedProducts} isHomePage={true}>
             {desktopBanners.length > 0 && <Banner banners={desktopBanners} />}
             {mobileBanners.length > 0 && <BannerMobile banners={mobileBanners} />}
             <Advantages />
